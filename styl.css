@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    scroll-behavior: smooth;
+    /* font-family: 'Inter', sans-serif; */
+  }
+  img{
+    display: block;
+    max-width: 100%;
+  }
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.head{
+  background: rgb(34, 34, 34);
+  position: absolute;
+  width: 1600px;
+  height: 75px;
+  left: 0;
+  top: 0;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.head_naviration{
+  width: 111px;
+  height: 38px;
+}
+.div_head_left{
+  width: 159px;
+  height: 29px;
+}
+.head_button{
+  background: rgb(232, 232, 232);
+}
+
+.pink{
+  position: absolute;
+  left: 231px;
+  top: 18px;
+}
+.head_img_1{
+  position: absolute;
+
+  left: 316px;
+  top: 28.21px;
+}
+
+.head_img_2{
+  cursor: pointer;
+  color: rgb(232, 232, 232);
+  position: absolute;
+  left: 1201px;
+  top: 30px;
+}
+.head_img_3{
+  cursor: pointer;
+  position: absolute;
+  left: 1266px;
+  top: 26px;
+}
+.head_img_4{
+  cursor: pointer;
+  position: absolute;
+  left: 1328px;
+  top: 26px;
+}
+.main_content{
+  display: flex;
+  max-width: 1600px;
+  position: absolute;
+  width: 1600px;
+  height: 764px;
+  top: 75px;
+  background: rgb(241, 228, 230);
+}
+.main_content_right_side{
+  padding: 20px 0;
+  margin-top: 350px;
+  height: 92px;
+  border-left: 12px solid  rgb(241, 109, 127);;
+  display: flex;
+}
+.main_content_right_side h1{
+  margin-left: 10PX;
+  width: 377px;
+  left: 892px;
+  top: 365px;
+  font-family: Lato;
+  font-size: 32px;
+
+}
+.img_card{
+  position: absolute;
+  width: 360px;
+  top: 904px;
+}
+.card_1{
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.big_card{
+  position: absolute;
+  width: 1140px;
+  height: 180px;
+  left: 230px;
+  top: 1194px;
+  margin-bottom:100px;
+}
+.cards_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.cards_bottom h1{
+  color: rgb(34, 34, 34);
+  font-family: Lato;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: left;
+}

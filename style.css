@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+img{
+    display: block;
+    max-width: 100%;
+}
+a, h1,p,button{
+    color: rgb(0, 0, 0);
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+}
+.container{
+    max-width: 1174px;
+    margin: 0 auto;
+}
+.header{
+    padding: 40px 0;
+    margin-bottom: 84px;
+}
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .head_naviration {
+    display: flex;
+    width: 533px;
+    justify-content: space-between;
+  }
+.head_a1{
+    color: rgb(242, 88, 34);
+    font-weight: 600;
+    font-size: 14px;
+}
+.head_a{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.main_content{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.main_content__left_side{
+    max-width:556px;;
+}
+.main_content__left_side h1{
+    max-width: 556px;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+
+}
+.main_content__left_side p{
+    width: 500px;
+    max-width: 556px;;
+    color: rgb(136, 136, 136);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 32px;
+}
+.main_content__left_side_button{
+    display: flex;
+    gap: 48px;
+
+}
+.main_content__left_side_button button{
+    padding: 16px 5px;
+    border-radius: 56px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+.main_content__left_side_button .button_1{
+    text-align: center;
+    width:140px;
+    color: rgb(255, 255, 255);
+    border-radius: 56px;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
+    background: rgb(242, 88, 34);
+}
+.main_content__left_side_button .button_2{
+    color: rgb(170, 170, 170);
+    background: none;
+}
+
+.one_navigatoin{
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+
+}
+.signpost {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  .signpost div {
+    padding: 40px 34px;
+    background: #fff;
+    max-width: 378px;
+}
+.signpost h2{
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.pointer{
+    max-width: 70px;
+    margin-bottom: 25px;
+}
+.signpost h3{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+}
+.signpost p{
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #666;
+}
+.energy{
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+    background: rgb(255, 255, 255);
+}
+
+.card_head h1{
+    font-family: Inter;
+    font-size: 48px;
+    text-align: center;
+}
+
+.card_head p{
+    color: rgb(136, 136, 136);
+    font-family: Inter;
+    line-height: 140%;
+    text-align: center;
+    width: 740px;
+    margin: 24px 217px;
+}
+
+.card_section{
+    
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 100px;
+    margin-top: 48px;
+    background: rgb(250, 250, 250);
+}
+.card{
+    margin-bottom: 32px;
+    background: rgb(255, 255, 255);
+    padding: 0px 34px 34px 34px;
+}
+.card img{
+    margin-bottom: 32px;
+}
+.card h2{
+    color: rgb(0, 0, 0);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: center;
+}
+.card p{
+    color: rgb(102, 102, 102);
+    font-family: Inter;
+    line-height: 150%;
+    text-align: center;
+
+}
+.card_buttom{
+    padding-top: 24px;
+    text-align: center;
+}
+.button_card{
+    cursor: pointer;
+    padding-top: 24px;
+    border: none;
+    border-radius: 56px;
+    background: rgb(242, 88, 34);
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    padding: 16px 32px;
+
+}
