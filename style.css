@@ -1,215 +1,273 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
   }
   body {
     scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
+    font-family: "Lato", sans-serif;
   }
-img{
+  img{
     display: block;
     max-width: 100%;
-}
-a, h1,p,button{
-    color: rgb(0, 0, 0);
-    font-family: "Inter", sans-serif;
-    text-decoration: none;
-}
+  }
 .container{
-    max-width: 1174px;
-    margin: 0 auto;
+  max-width: 1140px;
+  margin: 0 auto;
 }
+
+
 .header{
-    padding: 40px 0;
-    margin-bottom: 84px;
+  display: flex;
+  background: rgb(34, 34, 34);
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  max-width: 1600px;
+  
+
 }
-.head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .head_naviration {
-    display: flex;
-    width: 533px;
-    justify-content: space-between;
-  }
-.head_a1{
-    color: rgb(242, 88, 34);
-    font-weight: 600;
-    font-size: 14px;
-}
-.head_a{
-    font-weight: 400;
-    font-size: 14px;
+.head_naviration{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-left: 231px;
+  
 }
 
+.div_head_left{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-right: 240px;
+  
+}
+
+.head_button{
+  background: rgb(34, 34, 34);
+  border: none;
+}
+.pink{
+}
+.head_img_1{
+  background: rgb(34, 34, 34);
+}
+
+.head_img_2{
+
+
+}
+.head_img_3{
+}
+.head_img_4{
+
+}
 .main_content{
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-between;
+  margin: 0 auto;
+  background: rgb(241, 228, 230);
+  max-width: 1600px;
+  display: flex;
 
+  margin-bottom: 70px;
+  
 }
-.main_content__left_side{
-    max-width:556px;;
+.main_content_right_side{
+  margin-left: 64px;
+  border-left: 12px solid rgb(241, 109, 127);
+  max-width: 405px;
+  height: 93px;
+  margin-top: 290px;
+  margin-bottom: 381px;
+  padding-left: 16px;
+  
+  
 }
-.main_content__left_side h1{
-    max-width: 556px;
-    color: rgb(0, 0, 0);
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: left;
+.bid_text{
+  font-weight: 900;
+  font-size: 48px;
+}
+.small_text{
+  font-weight: 700;
+  font-size: 32px;
+}
+.highlight {
+  color: rgb(241, 109, 127);
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  margin-bottom: 96px;
+}
+.card_1{
+  background-size: cover;
+  height: 260px;
+  background-image: url(./img/woman.png);
+  width: 100%; 
+  
+}
+.blackout_1{
+  width: 100%;
+  background: rgba(33, 22, 22, 0.7);
+  height: 100%;
+}
+.blackout_2{
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 22, 22, 0.7);
+}
+.card_1_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 105px 103px;
+}
+.white_text{
+  color: rgb(255, 255, 255);
+}
+.pink_text{
+  color: rgb(241, 109, 127)
+}
+.card_1_text h3{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1px;
+  letter-spacing: 0%;
+  padding-bottom: 30px;
+}
+.card_1_text h1{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1px;
+  letter-spacing: 0%;
+}
+.card_2{
+  background-size: cover;
+  width: 100%;
+  background-image: url(./img/men.png);
+  height: 260px;
+}
+.card_3{
+  background-size: cover;
+  width: 100%; 
+  background-image: url(./img/kids.png);
+  height: 260px;
+}
+.card_4{
+  background-image: url(./img/ACCESORIES.png);
+  width: 100%;
+  height: 180px;
+  grid-column: span 3;
+}
+.card_2_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 65px 490px;
+}
+.card_2_text h3{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1px;
+  letter-spacing: 0%;
+  padding-bottom: 30px;
+}
+.card_2_text h1{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1px;
+  letter-spacing: 0%;
+}
+.cards_bottom{
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 48px;
+  text-align: center;
+}
+.cards_row{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.text_card_bottom{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.text_card_bottom h1{
+  color: rgb(34, 34, 34);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  padding-bottom: 6px;
 }
-.main_content__left_side p{
-    width: 500px;
-    max-width: 556px;;
-    color: rgb(136, 136, 136);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 140%;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-bottom: 32px;
+.text_card_bottom p{
+  color: rgb(159, 159, 159);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
 }
-.main_content__left_side_button{
-    display: flex;
-    gap: 48px;
-
-}
-.main_content__left_side_button button{
-    padding: 16px 5px;
-    border-radius: 56px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
-    letter-spacing: 0%;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-}
-.main_content__left_side_button .button_1{
-    text-align: center;
-    width:140px;
-    color: rgb(255, 255, 255);
-    border-radius: 56px;
-    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.2);
-    background: rgb(242, 88, 34);
-}
-.main_content__left_side_button .button_2{
-    color: rgb(170, 170, 170);
-    background: none;
+.background_card{
+  background: rgb(248, 248, 248);
 }
 
-.one_navigatoin{
-    padding: 100px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
-
-}
-.signpost {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
-  }
-  .signpost div {
-    padding: 40px 34px;
-    background: #fff;
-    max-width: 378px;
-}
-.signpost h2{
-    margin-bottom: 18px;
-    font-weight: 700;
-    font-size: 24px;
-}
-.pointer{
-    max-width: 70px;
-    margin-bottom: 25px;
-}
-.signpost h3{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 150%;
-}
-.signpost p{
-    margin-bottom: 25px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: #666;
-}
-.energy{
-    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
-    background: rgb(255, 255, 255);
+.text_card_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
 }
 
-.card_head h1{
-    font-family: Inter;
-    font-size: 48px;
-    text-align: center;
+.background_card p {
+  color: rgb(93, 93, 93);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  max-width: 315px;
+  width: 100%;
+  text-align: left;
 }
 
-.card_head p{
-    color: rgb(136, 136, 136);
-    font-family: Inter;
-    line-height: 140%;
-    text-align: center;
-    width: 740px;
-    margin: 24px 217px;
+.background_card h2{
+  padding-top: 20px;
+  padding-bottom: 16px;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.background_card h1{
+  padding-top: 16px;
+  padding-bottom: 24px;
+  color: rgb(241, 109, 127);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
 }
 
-.card_section{
-    
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 100px;
-    margin-top: 48px;
-    background: rgb(250, 250, 250);
-}
-.card{
-    margin-bottom: 32px;
-    background: rgb(255, 255, 255);
-    padding: 0px 34px 34px 34px;
-}
-.card img{
-    margin-bottom: 32px;
-}
-.card h2{
-    color: rgb(0, 0, 0);
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    text-align: center;
-}
-.card p{
-    color: rgb(102, 102, 102);
-    font-family: Inter;
-    line-height: 150%;
-    text-align: center;
-
-}
-.card_buttom{
-    padding-top: 24px;
-    text-align: center;
-}
 .button_card{
-    cursor: pointer;
-    padding-top: 24px;
-    border: none;
-    border-radius: 56px;
-    background: rgb(242, 88, 34);
-    color: rgb(255, 255, 255);
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
-    padding: 16px 32px;
-
+  color: rgb(242, 99, 118);
+  width: 220px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 15px 39px;
+  background-color: transparent;
+  border: 2px solid rgb(241, 109, 127);
+  margin-bottom: 60px;
 }
+/* @media (max-width: 1140px) and (min-width: 768px){
+  .container{
+    max-width: 736px;;
+  }
+
+} */
