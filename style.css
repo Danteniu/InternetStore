@@ -279,3 +279,94 @@ img {
     margin-bottom: 70px;
   }
 }
+@media (max-width: 767px){
+  .container{
+    max-width: 344px;;
+  }
+  .head {
+    padding: 18px 0;
+  }
+  .head_naviration {
+    justify-content: flex-start;
+  }
+  .div_head_left {
+    justify-content: flex-end;
+  }
+  .head_img_3{
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+   }
+   .head_img_4{
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+   }
+  .main_content--bg {
+    margin-bottom: 64px;
+  }
+   .main_content {
+    height: 363px;
+    display: flex;
+    justify-content: center;
+  }
+   .main_content_right_side {
+    padding-left: 15px;
+  }
+  .man{
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+   }
+  .bid_text {
+    font-weight: 900;
+    font-size: 38px;
+  }
+  .small_text {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  .card_1, .card_2, .card_3{
+    width: 343px;
+    height: 248px;
+  }
+  .card_4{
+    background-position: center;
+    background-size: cover;
+    height: 111px;
+  }
+  .cards_bottom {
+    gap: 64px;
+  }
+  .cards_row {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, 6);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .text_card_bottom h1 {
+    padding-bottom: 3px;
+  }
+
+  .background_card p {
+    max-width: 314px;
+  }
+  .background_card h2 {
+    padding-top: 23px;
+    padding-bottom: 13px;
+  }
+  .background_card h1 {
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+  .button_card {
+    width: 220px;
+    margin-bottom: 99px;
+  }
+}
