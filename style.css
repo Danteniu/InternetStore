@@ -109,7 +109,6 @@ img {
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
-  letter-spacing: 0%;
   text-align: left;
   padding-bottom: 24px;
   padding-left: 33px;
@@ -126,7 +125,6 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: 0%;
   text-align: left;
   padding-bottom: 11px;
   padding-left: 54px;
@@ -136,7 +134,6 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: 0%;
   text-align: left;
   padding-bottom: 12px;
   padding-left: 32px;
@@ -180,14 +177,12 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 1px;
-  letter-spacing: 0%;
   margin-bottom: 30px;
 }
 .card_text h1 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1px;
-  letter-spacing: 0%;
 }
 .card_2 {
   background-size: cover;
@@ -283,7 +278,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: 0%;
+
 }
 .background_card {
   background: rgb(248, 248, 248);
@@ -359,7 +354,7 @@ img {
   font-size: 19.96px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0%;
+
   margin-bottom: 16px;
 }
 .black_section p{
@@ -368,7 +363,7 @@ img {
   font-size: 13.97px;
   font-weight: 300;
   line-height: 17px;
-  letter-spacing: 0%;
+
   margin-bottom: 104px;
   max-width: 360px;
 }
@@ -407,7 +402,7 @@ img {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0%;
+
   text-align: center;
 }
 .blackout_white_right{
@@ -422,7 +417,7 @@ img {
   font-size: 24px;
   font-weight: 700;
   line-height: 167.2%;
-  letter-spacing: 0%;
+
   text-align: center;
 }
 .blackout_white_right h2{
@@ -431,7 +426,7 @@ img {
   font-size: 18px;
   font-weight: 400;
   line-height: 167.2%;
-  letter-spacing: 0%;
+
   text-align: center;
   margin-bottom: 32px;
 }
@@ -453,7 +448,7 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
-  letter-spacing: 0%;
+
   text-align: left;
 }
 .but_form{
@@ -467,7 +462,6 @@ font-family: Lato;
 font-size: 14px;
 font-weight: 400;
 line-height: 17px;
-letter-spacing: 0%;
 text-align: center;
 background: rgb(224, 92, 110);
 padding: 7px 8px;
@@ -491,7 +485,7 @@ border-radius: 0 30px 30px 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
-  letter-spacing: 0%;
+
 }
 .footer button{
   width: 31.45px;
@@ -585,7 +579,7 @@ border-radius: 0 30px 30px 0;
   .blackout_white_left p{
     padding-top: 5px;
     max-width: 360px;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 20px;
   }
   .blackout_white_right h2{
@@ -607,7 +601,7 @@ border-radius: 0 30px 30px 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
-    letter-spacing: 0%;
+  
   }
   .footer button{
     width: 31.45px;
@@ -683,7 +677,7 @@ border-radius: 0 30px 30px 0;
   }
   .cards_row {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr, 6);
+    grid-template-rows: repeat(6, 1fr);
     gap: 16px;
     margin-bottom: 40px;
   }
