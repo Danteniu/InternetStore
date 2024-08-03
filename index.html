@@ -16,7 +16,7 @@
           </button>
         </div>
         <div class="div_head_left">
-          <button class="head_button">
+          <button class="head_button head_buttons">
             <img class="head_img_2" src="./img/three_features.png" alt="three_features" />
           </button>
           <button class="head_button hidden"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
@@ -38,31 +38,43 @@
 	            <span class="highlight">FASHION</span>
 	          </h2>
 	        </div>
-            <div class="menu">
-                <h1 class="main_menu">MENU</h1>
+            <div class="menu hiddens">
+                <div class="menu_active">
+                    <h1 class="main_menu">MENU</h1>
                 <div class="menu_div">
                     <h1 class="menu_h">MAN</h1>
-                    <p>Accessories</p>
-                    <p>Bags</p>
-                    <p>Denim</p>
-                    <p>T-Shirts</p>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">Shirts</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h1 class="menu_h">WOMAN</h1>
-                    <p>Accessories</p>
-                    <p>Jackets & Coats</p>
-                    <p>Polos</p>
-                    <p>T-Shirts</p>
-                    <p>Shirts</p>
+                    <div class="menu_div">
+                        <h1 class="menu_h">WOMAN</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Jackets &amp;&nbsp;Coats</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Shirts</a></li>
+                    </ul>
+                    </div>
                 </div>
                 <div>
-                    <h1 class="menu_h">KIDS</h1>
-                    <p>Accessories</p>
-                    <p>Jackets & Coats</p>
-                    <p>Polos</p>
-                    <p>T-Shirts</p>
-                    <p>Shirts</p>
-                    <p>Bags</p>
+                    <div class="menu_div">
+                        <h1 class="menu_h">KIDS</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Jackets &amp;&nbsp;Coats</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Bags</a></li>
+                    </ul>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -95,7 +107,7 @@
         <div class="card_4">
           <div class="blackout">
             <div class="card_text">
-              <h3 class="white_text">LUXIROUS & TRENDY</h3>
+              <h3 class="white_text">LUXIROUS &amp;&nbsp;TRENDY</h3>
               <h1 class="pink_text">ACCESORIES</h1>
             </div>
           </div>
@@ -108,12 +120,10 @@
         </div>
         <div class="cards_row">
           <div class="background_card">
-            <img class="cards_img" src="./img/1card.jpg" alt="1card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/1card.jpg)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -125,12 +135,10 @@
             </div>
           </div>
           <div class="background_card">
-            <img class="cards_img" src="./img/2card.png" alt="2card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/2card.png)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -142,12 +150,10 @@
             </div>
           </div>
           <div class="background_card">
-            <img class="cards_img" src="./img/3card.png" alt="3card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/3card.png)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -159,12 +165,10 @@
             </div>
           </div>
           <div class="background_card">
-            <img class="cards_img" src="./img/4card.png" alt="4card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/4card.png)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -176,12 +180,10 @@
             </div>
           </div>
           <div class="background_card">
-            <img class="cards_img" src="./img/5card.png" alt="5card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/5card.png)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -193,12 +195,10 @@
             </div>
           </div>
           <div class="background_card">
-            <img class="cards_img" src="./img/6card.png" alt="6card" />
-            <div class="card_blackout">
-                <button>
-                    <img src="./img/shop.png" alt="shop">
-                    <h1 class="card_blackout_h1">Add to Cart</h1>
-                </button>
+            <div class="item-img" style="background-image: url(./img/6card.png)">
+                <div class="item-img__hover">
+                  <button class="item-img__hover-btn">Add to Cart</button>
+                </div>
             </div>
             <div class="text_card_description">
               <h2>ELLERY X M'O CAPSULE</h2>
@@ -226,7 +226,7 @@
             <div class="black_section_div">
                 <img class="black_section_img" src="./img/percentage.png" alt="percentage">
                 <div >
-                    <h2>Sales & discounts</h2>
+                    <h2>Sales &amp;&nbsp;discounts</h2>
                     <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
                 </div>
             </div>
@@ -263,7 +263,7 @@
         <div class="footer_div container">
             <h1>© 2021  Brand  All Rights Reserved.</h1>
             <div>
-                <button> 
+                <button>
                     <svg width="11" height="16" viewBox="0 0 11 16" fill="black" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.08827 8.28L9.50677 5.61602H6.89013V3.88729C6.89013 3.15847 7.25565 2.44806 8.42756 2.44806H9.61713V0.179975C9.61713 0.179975 8.53763 0 7.50551 0C5.35064 0 3.94211 1.27593 3.94211 3.5857V5.61602H1.54678V8.28H3.94211V14.72H6.89013V8.28H9.08827Z"/>
                     </svg>
@@ -308,5 +308,6 @@
         </div>
       </footer>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
