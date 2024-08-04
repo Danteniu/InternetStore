@@ -430,6 +430,9 @@ img {
   text-align: center;
   margin-bottom: 32px;
 }
+.form {
+  display: flex;
+}
 .email-input {
   background: rgb(225, 225, 225);
   border: none;
@@ -680,6 +683,7 @@ border-radius: 0 30px 30px 0;
     grid-template-rows: repeat(6, 1fr);
     gap: 16px;
     margin-bottom: 40px;
+    align-items: center;
   }
   .text_card_bottom h1 {
     padding-bottom: 3px;
@@ -742,10 +746,6 @@ border-radius: 0 30px 30px 0;
   .email-input {
     width: 270px;
     height: 47px;
-  }
-  .but_form{
-    margin-left: 16px;
-    margin-right: 16px;
   }
   .footer_div{
     flex-direction: column-reverse;
