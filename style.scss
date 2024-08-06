@@ -529,6 +529,7 @@ $pinkColor: rgb(241, 109, 127);
 .catalog_section{
     background: rgb(247, 247, 247);
     position: relative;
+    margin-bottom: 290px;
     &_div{
         display: flex;
         justify-content: space-between;
@@ -550,21 +551,25 @@ $pinkColor: rgb(241, 109, 127);
         fill: rgb(241, 109, 127);
     }
 }
+
 .catalog_section_2{
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     background: rgb(255, 255, 255);
 }
 .catalog_section_2_div{
+    border: 1px solid rgb(234, 234, 234);
+    background: rgb(255, 255, 255);
     position: absolute;
     margin-top: -64px;
-    // top: -64px;
-    background: rgba(235, 17, 17, 0.15);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // padding: 65px 0;
+    width: 1141px;
     &_1{
+        padding-top: 64px;
         margin-bottom: 12px;
     }
     &_1 h1{
@@ -631,7 +636,7 @@ $pinkColor: rgb(241, 109, 127);
         line-height: 17px;
     }
     }
-    &_button_2{
+    .catalog_section_2_div_button_2{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -641,14 +646,19 @@ $pinkColor: rgb(241, 109, 127);
         padding: 15px 0;
         padding-left: 24px;
         padding-right: 57px;
+        margin-bottom:  64px;
     }
-    &_button_2 h2{
+
+    .catalog_section_2_div_button_2 h2{
         color: rgb(242, 99, 118);
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
     }
-
+.cards_bottom{
+    margin-top: 360px;
+    margin-bottom: 128px;
+}
 
 
 
