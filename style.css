@@ -900,11 +900,16 @@ img {
   font-weight: 400;
   line-height: 29px;
 }
+.shopping_cart_h1:hover {
+  text-decoration: underline;
+}
 .shopping_cart_ul {
   list-style-type: none;
 }
 .shopping_cart_p {
-  padding: 1px 15px;
+  width: 45px;
+  height: 27px;
+  padding-left: 16px;
   border: 1px solid rgb(234, 234, 234);
 }
 .shopping_cart_li_div {
@@ -934,10 +939,16 @@ img {
   right: 22px;
   top: 28px;
 }
+.shopping_cart_cross1:hover path {
+  fill: rgb(241, 109, 127);
+}
 .shopping_cart_cross2 {
   position: absolute;
   right: 22px;
   top: 28px;
+}
+.shopping_cart_cross2:hover path {
+  fill: rgb(241, 109, 127);
 }
 .shopping_cart_button {
   margin-top: 72px;
@@ -953,6 +964,10 @@ img {
   line-height: 17px;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(164, 164, 164);
+}
+.shopping_cart_but:hover {
+  color: #ffffff;
+  background: rgb(241, 109, 127);
 }
 .shopping_cart_form {
   display: flex;
@@ -995,6 +1010,10 @@ img {
   font-size: 11px;
   font-weight: 300;
   line-height: 13px;
+}
+.shopping_cart_form1_but:hover {
+  color: #ffffff;
+  background: rgb(241, 109, 127);
 }
 
 .shopping_cart_form2 {
@@ -1048,6 +1067,118 @@ img {
 
 .t_900_1 {
   padding-left: 15px;
+}
+
+.registration_section {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  display: flex;
+  justify-content: space-between;
+  gap: 128px;
+}
+
+.registration_div1_h1 {
+  color: rgb(34, 34, 34);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  padding-bottom: 20px;
+}
+.registration_div1_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.registration_div1_sex {
+  margin-top: 31px;
+  display: flex;
+  margin-bottom: 35px;
+}
+.registration_div1_text1 {
+  margin-top: 2px;
+  margin-right: 20px;
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+}
+.registration_div1_circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(164, 164, 164);
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 8px;
+}
+.registration_div1_p {
+  margin-top: 15px;
+  margin-bottom: 39px;
+  color: rgb(177, 177, 177);
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  max-width: 359px;
+}
+.registration_div1_button {
+  border: none;
+  display: flex;
+  gap: 20px;
+  background: rgb(241, 109, 127);
+  color: rgb(255, 255, 255);
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 16px 29px;
+  width: 170px;
+}
+.registration_div1_img {
+  padding-top: 5px;
+}
+
+.registration_div_input1 {
+  border: 1px solid rgb(164, 164, 164);
+  color: rgb(177, 177, 177);
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  max-width: 360px;
+  padding: 13px 278px 16px 17px;
+}
+
+.registration_div2_h1 {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 22px;
+}
+.registration_div2_p {
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  margin-bottom: 21px;
+}
+.registration_div2_li {
+  display: flex;
+  gap: 23px;
+  list-style-type: none;
+  padding-bottom: 16px;
+  color: rgb(0, 0, 0);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+}
+.registration_div2_img {
+  max-width: 20px;
+  max-height: 16px;
 }
 
 @media (max-width: 1140px) and (min-width: 768px) {
