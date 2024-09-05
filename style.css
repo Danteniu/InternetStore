@@ -1518,4 +1518,7 @@ img {
     font-size: 16px;
     line-height: 19px;
   }
+  .white_section {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
