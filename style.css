@@ -591,7 +591,7 @@ img {
 .catalog_section {
   background: rgb(247, 247, 247);
   position: relative;
-  margin-bottom: 290px;
+  margin-bottom: 280px;
 }
 .catalog_section_div {
   display: flex;
@@ -618,6 +618,7 @@ img {
   justify-content: center;
   align-items: center;
   background: rgb(255, 255, 255);
+  margin-bottom: 330px;
 }
 
 .catalog_section_2_div {
@@ -1111,6 +1112,10 @@ img {
   background-color: white;
   margin-right: 8px;
 }
+.registration_div1_circle_ignore {
+  position: absolute;
+  left: -9999px;
+}
 .registration_div1_p {
   margin-top: 15px;
   margin-bottom: 39px;
@@ -1430,5 +1435,87 @@ img {
     gap: 40px;
     padding-bottom: 9px;
     padding-top: 43px;
+  }
+}
+@media (max-width: 1140px) and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .catalog_section {
+    margin-bottom: 315px;
+  }
+  .catalog_section_2_div {
+    border: none;
+    border-bottom: 1px solid rgb(234, 234, 234);
+  }
+  .card_ignore {
+    position: absolute;
+    left: -9999px;
+  }
+  .white_section {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1140px) and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .filter-sort {
+    margin-bottom: -20px;
+  }
+  .filter_heading {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+  }
+  .card_ignore {
+    position: absolute;
+    left: -9999px;
+  }
+  .black {
+    margin-top: -60px;
+  }
+  .white_section {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1140px) and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .registration_section {
+    padding-top: 40px;
+    gap: 22px;
+  }
+  .registration_div1_sex {
+    margin-top: 31px;
+    display: flex;
+    margin-bottom: 35px;
+  }
+  .registration_div1_text2 {
+    margin-left: 25px;
+  }
+  .registration_div1_circle_ignore {
+    position: absolute;
+    left: 183px;
+  }
+  .registration_div1_button {
+    width: 167px;
+  }
+  .registration_div2_h1 {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 32px;
+  }
+  .registration_div2_p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 22px;
+  }
+  .registration_div2_li {
+    gap: 23px;
+    padding-bottom: 17px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }/*# sourceMappingURL=style.css.map */
