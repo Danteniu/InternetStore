@@ -1500,3 +1500,51 @@ $pinkColor: rgb(241, 109, 127);
   max-width: 100%;
 }
 }
+// медиа запрос для shopping_cart
+@media (max-width: 1140px) and (min-width: 768px){
+  .container{
+    max-width: 734px;
+  }
+  .shopping_cart{
+    margin-top: 59px;
+
+    &_main{
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    &_button{
+      margin-top: 62px;
+      justify-content: center;
+      gap: 48px;
+    }
+    &_form{
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+  }
+  .shopping_cart_form1{
+  &_1{
+    display: flex;
+    flex-direction: column;
+  }
+    &_input{
+      max-width: 360px;
+    }
+    &_input_1{
+      max-width: 360px;
+    }
+    &_but{
+     max-width: 110px;
+    }
+  }
+  .shopping_cart_form2{
+    margin-top: 39px;
+    width: 360px;
+    max-height: 214px;
+  }
+  .white_section{
+    max-width: 100%;
+  }
+}
