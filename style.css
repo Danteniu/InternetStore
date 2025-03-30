@@ -1671,6 +1671,7 @@ img {
     padding-top: 0px;
   }
   .email-input {
+    width: 300px;
     height: 47px;
   }
   .footer_div {
