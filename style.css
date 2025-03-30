@@ -1690,7 +1690,7 @@ img {
     justify-content: center;
     align-items: center;
   }
-  .item-img__hover {
+  .item-img__hover_none {
     display: none; /* Скрываем кнопку на мобильных устройствах */
   }
 }
