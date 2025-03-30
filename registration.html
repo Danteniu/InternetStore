@@ -10,60 +10,117 @@
     <header class="head">
         <nav class="header container">
           <div class="head_naviration">
-            <a class="pink" href="#"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
+            <a class="pink" href="./index.html"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
             <button class="head_button">
               <img class="head_img_1" src="./img/magnifying_glass.png" alt="magnifying_glass" />
             </button>
           </div>
           <div class="div_head_left">
-            <button class="head_button head_buttons">
+            <button class="head_button head_buttons burger">
               <img class="head_img_2" src="./img/three_features.png" alt="three_features" />
             </button>
-            <button class="head_button hidden"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
+            <button class="head_button hidden" onclick="window.location.href='registration.html'"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
             <button class="head_button hidden">
-              <img class="head_img_4" src="./img/shopping_cart.png" alt="shopping_cart" />
+              <img class="head_img_4" src="./img/shopping_cart.png" onclick="window.location.href='shopping_cart.html'" alt="shopping_cart" />
             </button >
-            <div class="head_img_4_5"><span>5</span></div>
+            <div class="head_img_4_5"><span>0</span></div>
           </div>
         </nav>
       </header>
-      <nav class="catalog_nav">
+      <nav class="catalog_nav reg_nav">
         <div class="catalog_nav_div container">
-            <h2>REGISTRATION</h2>
+            <h2>РЕГИСТРАЦИЯ</h2>
         </div>
+        <div class="menu hiddens">
+                <div class="menu_active">
+                    <h1 class="main_menu">МЕНЮ</h1>
+                <div class="menu_div">
+                    <h1 class="menu_h" onclick="window.location.href='catalog_2.html'">МУЖЧИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Сумки</a></li>
+                        <li><a href="#">Джинсы</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 class="menu_h" onclick="window.location.href='catalog.html'">ЖЕНЩИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 onclick="window.location.href='kids.html'" class="menu_h">ДЕТИ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                        <li><a href="#">Сумки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
       </nav>
     <section class=" container registration_section">
-        <div class="registration_div1">
-            <h1 class="registration_div1_h1">Your Name</h1>
-            <form class="registration_div1_form" action="#">
-                <input class="registration_div_input1" type="text" placeholder="First Name">
-                <input class="registration_div_input1" type="text" placeholder="Last Name">
-            </form>
-            <div class="registration_div1_sex">
-                <div class="registration_div1_circle"></div>
-                    <p class="registration_div1_text1">Male</p>
-                    <div class="registration_div1_circle"></div>
-                    <p class="registration_div1_text1">Female</p>
-                    <div class="registration_div1_circle  registration_div1_circle_ignore"></div>
-                    <p class="registration_div1_text1 registration_div1_circle_ignore registration_div1_text2">Other</p>
-            </div>
-            <h1 class="registration_div1_h1">Login details</h1>
-            <form class="registration_div1_form" action="#">
-                <input class="registration_div_input1" type="email" placeholder="Email">
-                <input class="registration_div_input1" type="password" placeholder="Password">
-            </form>
-            <p class="registration_div1_p">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
-            <button class="registration_div1_button">JOIN NOW <img class="registration_div1_img" src="./img/right_arrow.png" alt="стрелка вправо"></button>
-        </div>
+       <div class="registration_div1">
+    <h1 class="registration_div1_h1">Ваше имя</h1>
+    <form class="registration_div1_form" id="registrationForm" action="#">
+        <input class="registration_div_input1" type="text" id="firstName" placeholder="Имя">
+        <input class="registration_div_input1" type="text" id="lastName" placeholder="Фамилия">
+    </form>
+    <div class="registration_div1_sex">
+        <label class="registration_div1_text1">
+            <input type="radio" name="sex" value="male" id="male">
+            <span class="registration_div1_text1"></span>
+            <p class="registration_div1_text1">Мужской</p>
+        </label>
+
+        <label class="registration_div1_text1">
+            <input type="radio" name="sex" value="female" id="female">
+            <span class="registration_div1_text1"></span>
+            <p class="registration_div1_text1">Женский</p>
+        </label>
+    </div>
+
+    <h1 class="registration_div1_h1">Данные для входа</h1>
+    <form class="registration_div1_form">
+        <input class="registration_div_input1" type="email" id="email" placeholder="Email">
+        <input class="registration_div_input1" type="password" id="password" placeholder="Пароль">
+    </form>
+    <p class="registration_div1_p">Пожалуйста, используйте 8 или более символов, а как минимум 1 цифрой и смесью заглавных и строчных букв</p>
+    
+    <button onclick="validateForm(event)" class="registration_div1_button">
+        ПРИСОЕДИНЯЙТЕСЬ СЕЙЧАС
+        <img class="registration_div1_img" src="./img/right_arrow.png" alt="стрелка вправо">
+    </button>
+    
+    <div class="message" id="successMessage">
+        Вы успешно зарегистрировались!
+    </div>
+    <div class="message" id="errorMessage">
+        Пожалуйста, заполните все поля.
+    </div>
+</div>
+
         <div class="registration_div2">
-            <h1 class="registration_div2_h1">LOYALTY HAS ITS PERKS</h1>
-            <p class="registration_div2_p">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+            <h1 class="registration_div2_h1">У ЛОЯЛЬНОСТИ ЕСТЬ СВОИ ПРЕИМУЩЕСТВА</h1>
+            <p class="registration_div2_p">Присоединяйтесь к программе лояльности, где вы можете зарабатывать баллы и открывать серьезные преимущества. Начиная с этого, как только вы присоединитесь:</p>
             <ul class="registration_div2_ul">
-                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> 15% off welcome offer</li>
-                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Free shipping, returns and exchanges on all orders</li>
-                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> $10 off a purchase on your birthday</li>
-                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Early access to products</li>
-                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Exclusive offers & rewards</li>
+                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка">Скидка 15% приветственное предложение</li>
+                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Бесплатная доставка, возврат и обмен на все заказы</li>
+                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка">Скидка 1000 руб. на покупку в ваш день рождения</li>
+                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Ранний доступ к продуктам</li>
+                <li class="registration_div2_li"> <img class="registration_div2_img" src="./img/done.png" alt="стрелочка"> Эксклюзивные предложения и награды</li>
             </ul>
         </div>
     </section>
@@ -72,24 +129,30 @@
                 <div class="blackout_white">
                   <div class="blackout_white_left">
                     <img src="./img/round_picture.png" alt="round_picture">
-                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                    <p>“Интернет-магазин — это не просто место для покупок, это пространство, где каждый может найти что-то, что сделает его день немного лучше“</p>
                   </div>
                   <div class="blackout_white_right">
-                    <h1>SUBSCRIBE</h1>
-                    <h2>FOR OUR NEWLETTER AND PROMOTION</h2>
+                    <h1>СООБЩИТЬ О ПРОБЛЕМЕ</h1>
+                    <h2>Белянкина Елизавета</h2>
                     <div class="but_form">
                         <form class="form" action="#">
-                            <input type="text" placeholder="Enter Your Email" class="email-input">
-                            <button class="white_but">Subscribe</button>
+                            <input type="text" placeholder="Введите свой адрес электронной почты." class="email-input">
+                            <button class="white_but">Сообщить.</button>
                         </form>
                     </div>
+                    <div class="error-message" style="display: none; color: red;">
+                                Пожалуйста, введите ваш email.
+                            </div>
                   </div>
+                  <div class="success-message" style="display: none;">
+                        Мы скоро с Вами свяжемся!
+                    </div>
               </div>
         </div>
       </section>
       <footer class="footer">
         <div class="footer_div container">
-            <h1>© 2021  Brand  All Rights Reserved.</h1>
+            <h1>© 2025  Бренд: Все права защищены.</h1>
             <div>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="black"><g clip-path="url(#a)">
@@ -106,5 +169,6 @@
             </div>
         </div>
       </footer>
+      <script src="./script.js"></script>
 </body>
 </html>

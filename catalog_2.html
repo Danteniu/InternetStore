@@ -1,44 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Catalog</title>
+    <title>Каталог</title>
 </head>
+
 <body>
     <header class="head">
         <nav class="header container">
-          <div class="head_naviration">
-            <a class="pink" href="#"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
-            <button class="head_button">
-              <img class="head_img_1" src="./img/magnifying_glass.png" alt="magnifying_glass" />
-            </button>
-          </div>
-          <div class="div_head_left">
-            <button class="head_button head_buttons">
-              <img class="head_img_2" src="./img/three_features.png" alt="three_features" />
-            </button>
-            <button class="head_button hidden"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
-            <button class="head_button hidden">
-              <img class="head_img_4" src="./img/shopping_cart.png" alt="shopping_cart" />
-            </button >
-            <div class="head_img_4_5"><span>5</span></div>
-          </div>
-        </nav>
+            <div class="head_naviration">
+                <a class="pink" href="./index.html"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
+                <button class="head_button" onclick="window.location.href='catalog.html'">
+            <img class="head_img_1" src="./img/magnifying_glass.png" alt="magnifying_glass" />
+          </button>
+            </div>
+            <div class="div_head_left">
+                <button class="head_button head_buttons">
+            <img class="head_img_2" src="./img/three_features.png" alt="three_features" />
+          </button>
+                <button class="head_button hidden" onclick="window.location.href='registration.html'"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
+                <button class="head_button hidden" onclick="window.location.href='shopping_cart.html'">
+            <img class="head_img_4" src="./img/shopping_cart.png" alt="shopping_cart" />
+          </button >
+          <div class="head_img_4_5"><span>0</span></div>
+        </div>
+      </nav>
       </header>
       <nav class="catalog_nav">
         <div class="catalog_nav_div container">
-            <h2>NEW ARRIVALS</h2>
-            <p>HOME / MEN / <span class="catalog_nav_div_pink">NEW ARRIVALS</span></p>
+            <h2 class="relative-position">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+            <p>ГЛАВНАЯ / МУЖЧИНЫ / <span class="catalog_nav_div_pink">НОВЫЕ ПОСТУПЛЕНИЯ</span></p>
         </div>
+        <div class="menu hiddens">
+                <div class="menu_active">
+                    <h1 class="main_menu">МЕНЮ</h1>
+                <div class="menu_div">
+                    <h1 class="menu_h" onclick="window.location.href='catalog_2.html'">МУЖЧИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Сумки</a></li>
+                        <li><a href="#">Джинсы</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 class="menu_h" onclick="window.location.href='catalog.html'">ЖЕНЩИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 onclick="window.location.href='kids.html'" class="menu_h">ДЕТИ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                        <li><a href="#">Сумки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
       </nav>
 
 
 
       <div class="filter-sort container">
         <details class="filter">
-            <summary class="filter_summary"> <span class="filter_heading">FILTER</span>
+            <summary class="filter_summary"> <span class="filter_heading">ФИЛЬТР</span>
                 <svg width="15.000000" height="10.000000" viewBox="0 0 15 10" fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>
                         Created with Pixso.
@@ -49,51 +90,51 @@
             </summary>
             <div class="filter_content">
                 <details class="filter_item" open>
-                    <summary class="filter_head">CATEGORY</summary>
+                    <summary class="filter_head">КАТЕГОРИЯ</summary>
                     <div class="filter_link-box">
-                        <a href="#" class="filter_link">Accessories</a>
-                        <a href="#" class="filter_link">Bags</a>
-                        <a href="#" class="filter_link">Denim</a>
-                        <a href="#" class="filter_link">Hoodies & Sweatshirts</a>
-                        <a href="#" class="filter_link">Jackets & Coats</a>
-                        <a href="#" class="filter_link">Polos</a>
-                        <a href="#" class="filter_link">Shirts</a>
-                        <a href="#" class="filter_link">Shoes</a>
-                        <a href="#" class="filter_link">Sweaters & Knits</a>
-                        <a href="#" class="filter_link">T-Shirts</a>
-                        <a href="#" class="filter_link">Tanks</a>
+                        <a href="#" class="filter_link">Аксессуары</a>
+                        <a href="#" class="filter_link">Сумки</a>
+                        <a href="#" class="filter_link">Джинсы</a>
+                        <a href="#" class="filter_link">Толстовки & свитшоты</a>
+                        <a href="#" class="filter_link">Куртки & пальто</a>
+                        <a href="#" class="filter_link">Поло</a>
+                        <a href="#" class="filter_link">Рубашки</a>
+                        <a href="#" class="filter_link">Обувь</a>
+                        <a href="#" class="filter_link">Свитера & Трикотажные изделия</a>
+                        <a href="#" class="filter_link">Футболки</a>
+                        <a href="#" class="filter_link">Майки</a>
                     </div>
                 </details>
                 <details class="filter_item">
-                    <summary class="filter_head">BRAND</summary>
+                    <summary class="filter_head">БРЕНД</summary>
                     <div class="filter_link-box">
-                        <a href="#" class="filter_link">Accessories</a>
-                        <a href="#" class="filter_link">Bags</a>
-                        <a href="#" class="filter_link">Denim</a>
-                        <a href="#" class="filter_link">Hoodies & Sweatshirts</a>
+                        <a href="#" class="filter_link">Аксессуары</a>
+                        <a href="#" class="filter_link">Сумки</a>
+                        <a href="#" class="filter_link">Джинсы</a>
+                        <a href="#" class="filter_link">Толстовки & свитшоты</a>
                         <a href="#" class="filter_link">Jackets & Coats</a>
-                        <a href="#" class="filter_link">Polos</a>
-                        <a href="#" class="filter_link">Shirts</a>
-                        <a href="#" class="filter_link">Shoes</a>
-                        <a href="#" class="filter_link">Sweaters & Knits</a>
-                        <a href="#" class="filter_link">T-Shirts</a>
-                        <a href="#" class="filter_link">Tanks</a>
+                        <a href="#" class="filter_link">Поло</a>
+                        <a href="#" class="filter_link">Рубашки</a>
+                        <a href="#" class="filter_link">Обувь</a>
+                        <a href="#" class="filter_link">Свитера & Трикотажные изделия</a>
+                        <a href="#" class="filter_link">Футболки</a>
+                        <a href="#" class="filter_link">Майки</a>
                     </div>
                 </details>
                 <details class="filter_item">
-                    <summary class="filter_head">DESIGNER</summary>
+                    <summary class="filter_head">ДИЗАЙНЕР</summary>
                     <div class="filter_link-box">
-                        <a href="#" class="filter_link">Accessories</a>
-                        <a href="#" class="filter_link">Bags</a>
-                        <a href="#" class="filter_link">Denim</a>
-                        <a href="#" class="filter_link">Hoodies & Sweatshirts</a>
+                        <a href="#" class="filter_link">Аксессуары</a>
+                        <a href="#" class="filter_link">Сумки</a>
+                        <a href="#" class="filter_link">Джинсы</a>
+                        <a href="#" class="filter_link">Толстовки & свитшоты</a>
                         <a href="#" class="filter_link">Jackets & Coats</a>
-                        <a href="#" class="filter_link">Polos</a>
-                        <a href="#" class="filter_link">Shirts</a>
-                        <a href="#" class="filter_link">Shoes</a>
-                        <a href="#" class="filter_link">Sweaters & Knits</a>
-                        <a href="#" class="filter_link">T-Shirts</a>
-                        <a href="#" class="filter_link">Tanks</a>
+                        <a href="#" class="filter_link">Поло</a>
+                        <a href="#" class="filter_link">Рубашки</a>
+                        <a href="#" class="filter_link">Обувь</a>
+                        <a href="#" class="filter_link">Свитера & Трикотажные изделия</a>
+                        <a href="#" class="filter_link">Футболки</a>
+                        <a href="#" class="filter_link">Майки</a>
                     </div>
                 </details>
             </div>
@@ -101,19 +142,79 @@
         <div class="sort">
             <details class="sort_details">
                 <summary class="sort_summary">
-                    <span class="sort_heading">TRENDING NOW</span>
+                    <!-- <span class="sort_heading">СЕЙЧАС В ТРЕНДЕ</span>
                     <svg width="10.020004" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <desc>
                                 Created with Pixso.
                         </desc>
                         <defs/>
                         <path id="Vector" d="M5 5C4.83 5 4.67 4.94 4.54 4.83L0.25 1.26C0.11 1.14 0.02 0.96 0 0.78C-0.02 0.59 0.04 0.4 0.16 0.25C0.28 0.11 0.46 0.02 0.64 0C0.83 -0.02 1.02 0.04 1.17 0.16L5 3.36L8.83 0.27C8.9 0.22 8.98 0.17 9.07 0.14C9.16 0.12 9.26 0.11 9.35 0.12C9.45 0.13 9.54 0.16 9.62 0.2C9.7 0.25 9.78 0.31 9.83 0.38C9.9 0.46 9.95 0.54 9.98 0.63C10.01 0.73 10.02 0.83 10.01 0.93C10 1.02 9.97 1.12 9.93 1.2C9.88 1.29 9.81 1.37 9.73 1.42L5.45 4.88C5.32 4.97 5.16 5.01 5 5Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
-                    </svg>
+                    </svg> -->
+                    <details class="sort_details">
+                      <summary class="sort_summary">
+                          <span class="sort_heading">СЕЙЧАС В ТРЕНДЕ</span>
+                          <svg width="10.020004" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector" d="M5 5C4.83 5 4.67 4.94 4.54 4.83L0.25 1.26C0.11 1.14 0.02 0.96 0 0.78C-0.02 0.59 0.04 0.4 0.16 0.25C0.28 0.11 0.46 0.02 0.64 0C0.83 -0.02 1.02 0.04 1.17 0.16L5 3.36L8.83 0.27C8.9 0.22 8.98 0.17 9.07 0.14C9.16 0.12 9.26 0.11 9.35 0.12C9.45 0.13 9.54 0.16 9.62 0.2C9.7 0.25 9.78 0.31 9.83 0.38C9.9 0.46 9.95 0.54 9.98 0.63C10.01 0.73 10.02 0.83 10.01 0.93C10 1.02 9.97 1.12 9.93 1.2C9.88 1.29 9.81 1.37 9.73 1.42L5.45 4.88C5.32 4.97 5.16 5.01 5 5Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                      </summary>
+                      <div class="sort_box">
+                          <div class="sort_check">
+                              <input type="checkbox" id="sort_check1">
+                              <label for="sort_check1">Бомберы</label>
+                          </div>
+                          <div class="sort_check">
+                              <input type="checkbox" id="sort_check2">
+                              <label for="sort_check2">Жакеты</label>
+                          </div>
+                          <div class="sort_check">
+                              <input type="checkbox" id="sort_check3">
+                              <label for="sort_check3">Косухи</label>
+                          </div>
+                          <div class="sort_check">
+                              <input type="checkbox" id="sort_check4">
+                              <label for="sort_check4">Рубашки</label>
+                          </div>
+                      </div>
+                  </details>
                 </summary>
             </details>
             <details class="sort_details">
+              <summary class="sort_summary">
+                  <details class="sort_details">
+                    <summary class="sort_summary">
+                        <span class="sort_heading">ЦЕНА</span>
+                        <svg width="10.020004" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <desc>
+                                  Created with Pixso.
+                          </desc>
+                          <defs/>
+                          <path id="Vector" d="M5 5C4.83 5 4.67 4.94 4.54 4.83L0.25 1.26C0.11 1.14 0.02 0.96 0 0.78C-0.02 0.59 0.04 0.4 0.16 0.25C0.28 0.11 0.46 0.02 0.64 0C0.83 -0.02 1.02 0.04 1.17 0.16L5 3.36L8.83 0.27C8.9 0.22 8.98 0.17 9.07 0.14C9.16 0.12 9.26 0.11 9.35 0.12C9.45 0.13 9.54 0.16 9.62 0.2C9.7 0.25 9.78 0.31 9.83 0.38C9.9 0.46 9.95 0.54 9.98 0.63C10.01 0.73 10.02 0.83 10.01 0.93C10 1.02 9.97 1.12 9.93 1.2C9.88 1.29 9.81 1.37 9.73 1.42L5.45 4.88C5.32 4.97 5.16 5.01 5 5Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
+                      </svg>
+                    </summary>
+                    <div class="sort_box sort_box_big">
+                        <div class="sort_check">
+                            <input type="checkbox" id="sort_check1">
+                            <label for="sort_check1">до 3000 руб.</label>
+                        </div>
+                        <div class="sort_check">
+                            <input type="checkbox" id="sort_check2">
+                            <label for="sort_check2">от 3000 до 7000 руб.</label>
+                        </div>
+                        <div class="sort_check">
+                            <input type="checkbox" id="sort_check3">
+                            <label for="sort_check3">от 7000 руб.</label>
+                        </div>
+                    </div>
+                </details>
+              </summary>
+          </details>
+            <details class="sort_details">
                 <summary class="sort_summary">
-                    <span class="sort_heading">SIZE</span>
+                    <span class="sort_heading">РАЗМЕР</span>
                     <svg width="10.020004" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <desc>
                                 Created with Pixso.
@@ -141,18 +242,7 @@
                     </div>
                 </div>
             </details>
-            <details class="sort_details">
-                <summary class="sort_summary">
-                    <span class="sort_heading">PRICE</span>
-                    <svg width="10.020004" height="5.003906" viewBox="0 0 10.02 5.00391" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <desc>
-                                Created with Pixso.
-                        </desc>
-                        <defs/>
-                        <path id="Vector" d="M5 5C4.83 5 4.67 4.94 4.54 4.83L0.25 1.26C0.11 1.14 0.02 0.96 0 0.78C-0.02 0.59 0.04 0.4 0.16 0.25C0.28 0.11 0.46 0.02 0.64 0C0.83 -0.02 1.02 0.04 1.17 0.16L5 3.36L8.83 0.27C8.9 0.22 8.98 0.17 9.07 0.14C9.16 0.12 9.26 0.11 9.35 0.12C9.45 0.13 9.54 0.16 9.62 0.2C9.7 0.25 9.78 0.31 9.83 0.38C9.9 0.46 9.95 0.54 9.98 0.63C10.01 0.73 10.02 0.83 10.01 0.93C10 1.02 9.97 1.12 9.93 1.2C9.88 1.29 9.81 1.37 9.73 1.42L5.45 4.88C5.32 4.97 5.16 5.01 5 5Z" fill="#6F6E6E" fill-opacity="1.000000" fill-rule="nonzero"/>
-                    </svg>
-                </summary>
-            </details>
+           
         </div>
       </div>
 
@@ -164,143 +254,138 @@
           <div class="background_card">
             <div class="item-img" style="background-image: url(./img/1card.jpg)">
                 <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
-                </div>
+                  <button class="item-img__hover-btn">Добавить в корзину</button>
+            </div>
             </div>
             <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
+                <h2>СИНЯЯ ВЕТРОВКА</h2>
+                <p>
+                    Синяя ветровка – идеальный выбор для активных людей, которые ценят комфорт и защиту от ветра. Ветровка выполнена из водоотталкивающего материала, который сохраняет тепло и защищает от неблагоприятных погодных условий.
+                </p>
+                <h1>6400 руб.</h1>
             </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/10card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            </div>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/10card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>БОРДОВЫЙ ЖАКЕТ</h2>
+                    <p>
+                        Элегантный бордовый жакет – идеальное решение для тех, кто хочет добавить яркости и изысканности в свой образ. Изготовленный из качественного материала, жакет с лаконичным кроем и классическим дизайном прекрасно подходит как для официальных мероприятий,
+                        так и для повседневных встреч.
+                    </p>
+                    <h1>8000 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card card_ignore">
-            <div class="item-img" style="background-image: url(./img/3card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card card_ignore">
+                <div class="item-img" style="background-image: url(./img/3card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>СИНЕЕ ПОЛО В ПОЛОСКУ</h2>
+                    <p>
+                        Синее поло в полоску – стильная и универсальная вещь для тех, кто ценит комфорт и модный вид. Классическая модель с воротником и пуговицами спереди идеально подходит как для повседневных, так и для более формальных образов. Приятная на ощупь ткань из
+                        смеси хлопка дарит ощущение свежести.
+                    </p>
+                    <h1>6000 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/4card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/4card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>СИНЯЯ МАЙКА</h2>
+                    <p>
+                        Она выполнена из мягкого и дышащего материала, который обеспечит комфорт на протяжении всего дня. Простая, но элегантная модель с классическим кроем подходит как для активного отдыха, так и для повседневных прогулок.
+                    </p>
+                    <h1>4200 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/11card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/11card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>БЕЛАЯ ФУТБОЛКА</h2>
+                    <p>
+                        Белая футболка – классика, которая всегда в моде. Изготовлена из мягкого и качественного хлопка, она подарит ощущение лёгкости и комфорта. Простота и универсальность этой модели позволяют сочетать её с различными стилями одежды.
+                    </p>
+                    <h1>2000 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/12card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/12card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>БИРЮЗОВАЯ КЕПКА</h2>
+                    <p>
+                        Бирюзовая кепка – стильный аксессуар, который добавит изюминку в любой образ. Благодаря своей расцветке, она прекрасно сочетает стиль и функциональность. Универсальная модель подходит как для активного отдыха, так и для повседневных прогулок по городу.
+                    </p>
+                    <h1>3600 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/13card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/13card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>БЕЛАЯ РУБАШКА</h2>
+                    <p>
+                        Белая рубашка – это элегантная базовая вещь, которая должна быть в гардеробе каждого. Она универсальна и подходит как для деловых встреч, так и для создания более расслабленных образов. Изготовлена из лёгкой, дышащей ткани, она обеспечит комфорт в любой
+                        ситуации.
+                    </p>
+                    <h1>7000 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/14card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/14card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>ЧЁРНАЯ КОСУХА</h2>
+                    <p>
+                        Чёрная косуха – это смелый и стильный элемент гардероба, который не выйдет из моды. Эта кожаная куртка добавит образу уверенности и брутальности. Застёжка на молнию, асимметричный крой и металлические детали придают модели современный и динамичный вид.
+                    </p>
+                    <h1>9000 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
-            </div>
-          </div>
-          <div class="background_card">
-            <div class="item-img" style="background-image: url(./img/15card.png)">
-                <div class="item-img__hover">
-                  <button class="item-img__hover-btn">Add to Cart</button>
+            <div class="background_card">
+                <div class="item-img" style="background-image: url(./img/15card.png)">
+                    <div class="item-img__hover">
+                        <button class="item-img__hover-btn">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="text_card_description">
+                    <h2>КОРИЧНЕВАЯ РУБАШКА</h2>
+                    <p>
+                        Коричневая рубашка – это стильный и универсальный элемент одежды, который легко сочетается с любым гардеробом. Модель с классическим воротником и пуговицами подходит как для работы, так и для расслабленных выходов в город. Отличный выбор для тех, кто
+                        ценит комфорт и стиль.
+                    </p>
+                    <h1>2900 руб.</h1>
                 </div>
             </div>
-            <div class="text_card_description">
-              <h2>ELLERY X M'O CAPSULE</h2>
-              <p>
-                Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up
-                with Moda Operandi.
-              </p>
-              <h1>$52.00</h1>
             </div>
-          </div>
-        </div>
-        <div>
-            <button class="but_catalog">
+            <div>
+                <button class="but_catalog">
                 <div class="but_catalog_text">
-                    <svg width="8.000000" height="14.000000" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg width="8.000000" height="14.000000" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="cursor: pointer;">
                         <desc>
                                 Created with Pixso.
                         </desc>
@@ -308,88 +393,96 @@
                         <path id="Vector" d="M8 2L3 7L8 12L7 14L0 7L7 0L8 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
                     </svg>
                     <div class="but_catalog_numbers">
-                        <span class="number">1</span>
-                        <span class="number">2</span>
+                        <span onclick="window.location.href='catalog_2.html'" class="number">1</span>
+                        <span onclick="window.location.href='man_page_2.html'" class="number">2</span>
                         <span class="number">3</span>
                         <span class="number">4</span>
                         <span class="number">5</span>
                         <span class="number">...</span>
                         <span class="number">20</span>
                     </div>
-                    <svg class="svg_transform" width="8.000000" height="14.000000" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="svg_transform" width="8.000000" height="14.000000" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
                         <desc>
                                 Created with Pixso.
                         </desc>
                         <defs/>
-                        <path id="Vector" d="M8 2L3 7L8 12L7 14L0 7L7 0L8 2Z" fill="#000000" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        <path id="Vector" d="M8 2L3 7L8 12L7 14L0 7L7 0L8 2Z" fill="#000000" fill-opacity="1.000000" style="cursor: pointer;" fill-rule="nonzero"/>
                     </svg>
                 </div>
             </button>
-        </div>
-      </section>
-      <section class="black">
-        <div class=" black_section container">
-            <div class="black_section_div">
-                <img class="black_section_img" src="./img/car.png" alt="car">
-                <div >
-                    <h2>Free Delivery</h2>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                </div>
             </div>
-            <div class="black_section_div">
-                <img class="black_section_img" src="./img/percentage.png" alt="percentage">
-                <div >
-                    <h2>Sales &amp;&nbsp;discounts</h2>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                </div>
-            </div>
-            <div class="black_section_div">
-                <img class="black_section_img" src="./img/crown.png" alt="crown">
-                <div >
-                    <h2>Quality assurance</h2>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
-                </div>
-            </div>
-        </div>
-      </section>
-      <section class="white">
-        <div class="white_section container">
-                <div class="blackout_white">
-                  <div class="blackout_white_left">
-                    <img src="./img/round_picture.png" alt="round_picture">
-                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
-                  </div>
-                  <div class="blackout_white_right">
-                    <h1>SUBSCRIBE</h1>
-                    <h2>FOR OUR NEWLETTER AND PROMOTION</h2>
-                    <div class="but_form">
-                        <form class="form" action="#">
-                            <input type="text" placeholder="Enter Your Email" class="email-input">
-                            <button class="white_but">Subscribe</button>
-                        </form>
+            </section>
+            <section class="black">
+                <div class=" black_section container">
+                    <div class="black_section_div">
+                        <img class="black_section_img" src="./img/car.png" alt="car">
+                        <div>
+                            <h2>Бесплатная доставка</h2>
+                            <p>Доставка по всему миру для всех. Авторитетно преобразуйте инновации следующего поколения с помощью расширенных моделей.</p>
+                        </div>
                     </div>
-                  </div>
-              </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer_div container">
-            <h1>© 2021  Brand  All Rights Reserved.</h1>
-            <div>
-                <button>
+                    <div class="black_section_div">
+                        <img class="black_section_img" src="./img/percentage.png" alt="percentage">
+                        <div>
+                            <h2>Распродажи &amp;&nbsp;Скидки</h2>
+                            <p>Не упустите шанс обновить свой гардероб по выгодным ценам. В разделе Распродажи и Скидки вы найдёте лучшие предложения на стильную одежду и аксессуары.</p>
+                        </div>
+                    </div>
+                    <div class="black_section_div">
+                        <img class="black_section_img" src="./img/crown.png" alt="crown">
+                        <div>
+                            <h2>Гарантия качества</h2>
+                            <p>Мы заботимся о вашем комфорте и уверенности в покупке. В нашем интернет-магазине представлена только качественная продукция от проверенных производителей.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="white">
+                <div class="white_section container">
+                    <div class="blackout_white">
+                        <div class="blackout_white_left">
+                            <img src="./img/round_picture.png" alt="round_picture">
+                            <p>“Интернет-магазин — это не просто место для покупок, это пространство, где каждый может найти что-то, что сделает его день немного лучше“</p>
+                        </div>
+                        <div class="blackout_white_right">
+                            <h1>СООБЩИТЬ О ПРОБЛЕМЕ</h1>
+                            <h2>Белянкина Елизавета</h2>
+                            <div class="but_form">
+                                <form class="form" action="#">
+                                    <input type="text" placeholder="Введите свой адрес электронной почты." class="email-input">
+                                    <button class="white_but">Сообщить.</button>
+                                </form>
+                            </div>
+                            <div class="error-message" style="display: none; color: red;">
+                                Пожалуйста, введите ваш email.
+                            </div>
+                        </div>
+                        <div class="success-message" style="display: none;">
+                            Мы скоро с Вами свяжемся!
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer_div container">
+                    <h1>© 2025 Бренд: Все права защищены.</h1>
+                    <div>
+                        <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="black"><g clip-path="url(#a)">
                         <path d="M6.74.203C3.555.203.408 2.341.408 5.8c0 2.2 1.23 3.45 1.974 3.45.307 0 .484-.863.484-1.106 0-.29-.735-.91-.735-2.119 0-2.513 1.9-4.294 4.358-4.294 2.114 0 3.678 1.21 3.678 3.431 0 1.66-.661 4.772-2.803 4.772-.773 0-1.434-.562-1.434-1.368 0-1.182.82-2.325.82-3.544 0-2.069-2.915-1.694-2.915.806 0 .525.065 1.106.298 1.584-.429 1.857-1.304 4.622-1.304 6.535 0 .59.084 1.172.14 1.762.105.12.053.107.214.047 1.564-2.156 1.509-2.578 2.216-5.4.382.732 1.37 1.125 2.151 1.125 3.297 0 4.777-3.234 4.777-6.15 0-3.103-2.663-5.128-5.587-5.128Z"/></g><defs>
                         <path fill="#fff" d="M.408 0h11.92v16H.407z"/></defs>
                     </svg>
                 </button>
-                <button>
+                        <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="black"><g clip-path="url(#a)">
                         <path d="M14.418 4.741c.01.142.01.284.01.426 0 4.335-3.277 9.33-9.267 9.33a9.16 9.16 0 0 1-5.002-1.472c.262.03.515.04.787.04a6.496 6.496 0 0 0 4.044-1.4A3.266 3.266 0 0 1 1.944 9.39c.202.03.404.05.615.05.293 0 .585-.04.857-.111A3.274 3.274 0 0 1 .805 6.112V6.07c.433.244.937.396 1.472.416a3.283 3.283 0 0 1-1.452-2.73c0-.61.161-1.168.444-1.656a9.238 9.238 0 0 0 6.715 3.432 3.727 3.727 0 0 1-.08-.751c0-1.808 1.452-3.28 3.257-3.28a3.24 3.24 0 0 1 2.38 1.036 6.386 6.386 0 0 0 2.067-.792 3.266 3.266 0 0 1-1.432 1.807 6.494 6.494 0 0 0 1.876-.507 7.029 7.029 0 0 1-1.634 1.695Z"/></g><defs>
                             <path fill="#fff" d="M.16 0H16.05v16H.16z"/></defs>
                     </svg>
                 </button>
-            </div>
-        </div>
-      </footer>
+                    </div>
+                </div>
+            </footer>
+            <script src="./script.js"></script>
 </body>
+
 </html>

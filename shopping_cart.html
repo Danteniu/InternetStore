@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Корзина товаров</title>
 </head>
 <body>
     <header class="head">
         <nav class="header container">
           <div class="head_naviration">
-            <a class="pink" href="#"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
-            <button class="head_button">
+            <a class="pink" href="./index.html"><img src="./img/pink_circle.png" alt="pink_circle.png" /></a>
+            <button class="head_button" onclick="window.location.href='catalog.html'">
               <img class="head_img_1" src="./img/magnifying_glass.png" alt="magnifying_glass" />
             </button>
           </div>
@@ -19,116 +19,167 @@
             <button class="head_button head_buttons">
               <img class="head_img_2" src="./img/three_features.png" alt="three_features" />
             </button>
-            <button class="head_button hidden"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
-            <button class="head_button hidden">
+            <button class="head_button hidden" onclick="window.location.href='registration.html'"><img class="head_img_3" src="./img/human.png" alt="human" /></button>
+            <button class="head_button hidden" onclick="window.location.href='shopping_cart.html'">
               <img class="head_img_4" src="./img/shopping_cart.png" alt="shopping_cart" />
             </button >
-            <div class="head_img_4_5"><span>5</span></div>
+            <div class="head_img_4_5"><span>0</span></div>
           </div>
         </nav>
       </header>
       <nav class="catalog_nav">
         <div class="catalog_nav_div container">
-            <h2>SHOPPING CART</h2>
+            <h2>КОРЗИНА</h2>
         </div>
+         <div class="menu hiddens">
+                <div class="menu_active">
+                    <h1 class="main_menu">МЕНЮ</h1>
+                <div class="menu_div">
+                    <h1 class="menu_h" onclick="window.location.href='catalog_2.html'">МУЖЧИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Сумки</a></li>
+                        <li><a href="#">Джинсы</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 class="menu_h" onclick="window.location.href='catalog.html'">ЖЕНЩИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="menu_div">
+                        <h1 onclick="window.location.href='kids.html'" class="menu_h">ДЕТИ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                        <li><a href="#">Сумки</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
       </nav>
       <section class="container shopping_cart">
-        <div class="shopping_cart_main">
-            <div>
-                <div class="shopping_cart_1">
-                    <img class="shopping_cart_img" src="./img/3card.png" alt="карточка1">
-                    <div class="shopping_cart_block">
-                        <h1 class="shopping_cart_h1">MANGO  PEOPLE  T-SHIRT</h1>
-                        <ul class="shopping_cart_ul">
-                            <li class="shopping_cart_li">Price: <span class="pink_text">$300</span></li>
-                            <li class="shopping_cart_li">Color: Red</li>
-                            <li class="shopping_cart_li">Size: Xl</li>
-                            <div class="shopping_cart_li_div">
-                                <li class="shopping_cart_li">Quantity:</li>
-                                <input class="shopping_cart_p" type="number" value="2">
-                            </div>
-                        </ul>
-                    </div>
-                    <svg class="shopping_cart_cross1" width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <desc>
-                                Created with Pixso.
-                        </desc>
-                        <defs/>
-                        <path id="Vector" d="M11.24 9L17.53 2.71C17.82 2.41 17.99 2.01 17.99 1.59C17.99 1.17 17.82 0.76 17.53 0.46C17.23 0.16 16.83 0 16.4 0C15.98 0 15.58 0.16 15.28 0.46L9 6.75L2.71 0.46C2.41 0.16 2.01 0 1.59 0C1.16 0 0.76 0.16 0.46 0.46C0.16 0.76 0 1.16 0 1.59C0 2.01 0.16 2.41 0.46 2.71L6.75 9L0.46 15.28C0.16 15.58 0 15.98 0 16.4C0 16.83 0.16 17.23 0.46 17.53C0.76 17.83 1.16 18 1.59 18C2.01 18 2.41 17.83 2.71 17.53L9 11.24L15.28 17.53C15.58 17.83 15.98 18 16.4 18C16.83 18 17.23 17.83 17.53 17.53C17.83 17.23 18 16.83 18 16.4C18 15.98 17.83 15.58 17.53 15.28L11.24 9Z" fill="#575757" fill-opacity="1.000000" fill-rule="nonzero"/>
-                    </svg>
-                </div>
-                <div class="shopping_cart_2">
-                    <img class="shopping_cart_img" src="./img/10card.png" alt="карточка1">
-                    <div class="shopping_cart_block">
-                        <h1 class="shopping_cart_h1">MANGO  PEOPLE  T-SHIRT</h1>
-                        <ul class="shopping_cart_ul">
-                            <li class="shopping_cart_li">Price: <span class="pink_text">$300</span></li>
-                            <li class="shopping_cart_li">Color: Red</li>
-                            <li class="shopping_cart_li">Size: Xl</li>
-                            <div class="shopping_cart_li_div">
-                                <li class="shopping_cart_li">Quantity:</li>
-                                <input class="shopping_cart_p" type="number" value="2">
-                            </div>
-                        </ul>
-                    </div>
-                    <svg class="shopping_cart_cross2" width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <desc>
-                                Created with Pixso.
-                        </desc>
-                        <defs/>
-                        <path id="Vector" d="M11.24 9L17.53 2.71C17.82 2.41 17.99 2.01 17.99 1.59C17.99 1.17 17.82 0.76 17.53 0.46C17.23 0.16 16.83 0 16.4 0C15.98 0 15.58 0.16 15.28 0.46L9 6.75L2.71 0.46C2.41 0.16 2.01 0 1.59 0C1.16 0 0.76 0.16 0.46 0.46C0.16 0.76 0 1.16 0 1.59C0 2.01 0.16 2.41 0.46 2.71L6.75 9L0.46 15.28C0.16 15.58 0 15.98 0 16.4C0 16.83 0.16 17.23 0.46 17.53C0.76 17.83 1.16 18 1.59 18C2.01 18 2.41 17.83 2.71 17.53L9 11.24L15.28 17.53C15.58 17.83 15.98 18 16.4 18C16.83 18 17.23 17.83 17.53 17.53C17.83 17.23 18 16.83 18 16.4C18 15.98 17.83 15.58 17.53 15.28L11.24 9Z" fill="#575757" fill-opacity="1.000000" fill-rule="nonzero"/>
-                    </svg>
-                </div>
-                <div class="shopping_cart_button">
-                    <button class="shopping_cart_but">CLEAR SHOPPING CART</button>
-                    <button class="shopping_cart_but">CONTINUE SHOPPING</button>
-                </div>
+      <div class="shopping_cart_main">
+        <div class="shopping_cart_items"></div> 
+        <div class="shopping_cart_button">
+            <button onclick="window.location.href='catalog_2.html'" class="shopping_cart_but shopping_cart_but2">КАРТОЧКА ДЛЯ ПОКУПОК</button>
+            <button class="shopping_cart_but " onclick="window.location.href='index.html'">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+        </div>
+    </div>
+    </div>
             </div>
             <div class="shopping_cart_form">
                 <div class="shopping_cart_form1">
-                <h1 class="shopping_cart_form1_h1">SHIPPING ADRESS</h1>
+                <h1 class="shopping_cart_form1_h1">АДРЕС ДОСТАВКИ</h1>
                 <form class="shopping_cart_form1_1" action="#">
-                    <input class="shopping_cart_form1_input_1" type="text" placeholder="Bangladesh">
-                    <input class="shopping_cart_form1_input" type="text" placeholder="State">
-                    <input class="shopping_cart_form1_input" type="text" placeholder="Postcode / Zip">
-                <button class="shopping_cart_form1_but">GET A QUOTE</button>
+                    <input class="shopping_cart_form1_input_1" type="text" placeholder="Страна">
+                    <input class="shopping_cart_form1_input" type="text" placeholder="Город">
+                    <input class="shopping_cart_form1_input" type="text" placeholder="Индекс">
+                <button class="shopping_cart_form1_but">ПОЛУЧИТЬ РАСЦЕНКУ</button>
             </form>
+            <p class="form-message" style="display: none;"></p>
             </div>
             <div class="shopping_cart_form2">
                 <div class="shopping_cart_form2_text">
-                    <p class="shopping_cart_form2_p">SUB TOTAL <span class="t_900_1">$900</span></p>
-                <h2 class="shopping_cart_form2_h2">GRAND TOTAL <span class="pink_text t_900">$900</span></h2>
+                    <p class="shopping_cart_form2_p">ИТОГО<span class="t_900_1">0 руб.</span></p>
+                <h2 class="shopping_cart_form2_h2">ОБЩИЙ ИТОГ<span class="pink_text t_900">0 руб.</span></h2>
                 </div>
                 <div class="shopping_cart_form2_button">
-                    <button class="shopping_cart_form2_but">PROCEED TO CHECKOUT</button>
+                    <button class="shopping_cart_form2_but">ПЕРЕЙТИ К ОФОРМЛЕНИЮ ЗАКАЗА</button>
                 </div>
             </div>
         </div>
             </div>
+            <!-- Модальное окно -->
+<div id="checkout-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <section class="checkout-section">
+      <div class="container">
+        <h1>Оформление заказа</h1>
+        <div class="checkout-progress">
+          <div class="progress-step completed">1. Корзина</div>
+          <div class="progress-step active">2. Оформление заказа</div>
+          <div class="progress-step">3. Подтверждение</div>
+        </div>
+
+        <div class="checkout-content">
+          <div class="checkout-address">
+            <h2>Адрес доставки</h2>
+            <form>
+              <label for="country">Страна:</label>
+              <input type="text" id="country" placeholder="Введите страну" required>
+
+              <label for="city">Город:</label>
+              <input type="text" id="city" placeholder="Введите город" required>
+
+              <label for="zip">Индекс:</label>
+              <input type="text" id="zip" placeholder="Введите индекс" required>
+            </form>
+          </div>
+
+          <div class="checkout-items">
+            <h2>Ваш заказ</h2>
+            <ul>
+              <li>Товар 1 — 2 шт. — 1000 ₽</li>
+              <li>Товар 2 — 1 шт. — 500 ₽</li>
+            </ul>
+            <p>Итого: <strong>1500 ₽</strong></p>
+          </div>
+        </div>
+
+        <div class="checkout-actions">
+          <button class="btn-confirm">Подтвердить заказ</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
       </section>
       <section class="white">
         <div class="white_section container">
                 <div class="blackout_white">
                   <div class="blackout_white_left">
                     <img src="./img/round_picture.png" alt="round_picture">
-                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“</p>
+                    <p>“Интернет-магазин — это не просто место для покупок, это пространство, где каждый может найти что-то, что сделает его день немного лучше“</p>
                   </div>
                   <div class="blackout_white_right">
-                    <h1>SUBSCRIBE</h1>
-                    <h2>FOR OUR NEWLETTER AND PROMOTION</h2>
+                    <h1>СООБЩИТЬ О ПРОБЛЕМЕ</h1>
+                    <h2>Белянкина Елизавета</h2>
                     <div class="but_form">
                         <form class="form" action="#">
-                            <input type="text" placeholder="Enter Your Email" class="email-input">
-                            <button class="white_but">Subscribe</button>
+                            <input type="text" placeholder="Введите свой адрес электронной почты." class="email-input">
+                            <button class="white_but">Сообщить.</button>
                         </form>
                     </div>
+                    <div class="error-message" style="display: none; color: red;">
+                                Пожалуйста, введите ваш email.
+                            </div>
+                  </div>
+                  <div class="success-message" style="display: none;">
+                    Мы скоро с Вами свяжемся!
                   </div>
               </div>
         </div>
       </section>
       <footer class="footer">
         <div class="footer_div container">
-            <h1>© 2021  Brand  All Rights Reserved.</h1>
+            <h1>© 2025  Бренд: Все права защищены.</h1>
             <div>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="black"><g clip-path="url(#a)">
@@ -145,5 +196,6 @@
             </div>
         </div>
       </footer>
+      <script src="./script.js"></script>
 </body>
 </html>
