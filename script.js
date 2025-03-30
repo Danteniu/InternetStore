@@ -338,16 +338,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const addToCartButton = card.querySelector('.item-img__hover-btn'); // Кнопка для добавления в корзину
         let isButtonVisible = false; // Переменная для отслеживания видимости кнопки
 
-        // При клике на картинку товара
+        // Обработчик клика по картинке товара
         card.addEventListener('click', function(event) {
-            if (event.target !== addToCartButton && !isButtonVisible) {
-                // Если не нажали на кнопку и кнопка ещё не показана
+            // Показываем кнопку при первом клике на картинку товара
+            if (!isButtonVisible) {
                 hoverElement.style.display = 'flex'; // Показываем кнопку
                 isButtonVisible = true; // Устанавливаем, что кнопка теперь видна
             }
         });
 
-        // При клике на кнопку "Добавить в корзину"
+        // Обработчик клика по кнопке "Добавить в корзину"
         addToCartButton.addEventListener('click', function(event) {
             event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал клик на картинку
 
@@ -380,4 +380,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
