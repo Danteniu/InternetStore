@@ -1690,8 +1690,13 @@ img {
     justify-content: center;
     align-items: center;
   }
+  .item-img__hover {
+    display: none !important;
+  }
   .item-img__hover_none {
-    display: none; /* Скрываем кнопку на мобильных устройствах */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {

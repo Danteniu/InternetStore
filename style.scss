@@ -1742,10 +1742,14 @@
             justify-content: center;
             align-items: center;
         }
-        .item-img__hover_none {
-            display: none; /* Скрываем кнопку на мобильных устройствах */
+        .item-img__hover {
+            display: none !important;
         }
-        
+        .item-img__hover_none {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
 }
     
     
