@@ -1680,6 +1680,11 @@ img {
     padding-bottom: 9px;
     padding-top: 43px;
   }
+  .item-img__hover-btn {
+    display: block; /* Убедись, что кнопка видима */
+    position: relative;
+    z-index: 10; /* Убедись, что кнопка находится выше других элементов */
+  }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
   .container {

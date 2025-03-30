@@ -254,10 +254,12 @@ if (document.querySelector('.shopping_cart_items')) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM загружен');
     const form = document.querySelector('.shopping_cart_form1_1');
     const submitButton = document.querySelector('.shopping_cart_form1_but');
     const messageElement = document.querySelector('.form-message');
     const inputs = form.querySelectorAll('input');
+    
 
     // Обработчик нажатия на кнопку "ПОЛУЧИТЬ РАСЦЕНКУ"
     submitButton.addEventListener('click', function(event) {
@@ -288,20 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function updateButton() {
-    const button = document.querySelector('.head_button');
-    const img = document.querySelector('.head_img_1');
 
-    if (window.matchMedia('(max-width: 768px)').matches) {
-        // Изменяем поведение и источник картинки для экранов шириной <= 768px
-        button.setAttribute('onclick', "window.location.href='registration.html'");
-        img.setAttribute('src', './img/human.png');
-    } else {
-        // Возвращаем стандартное поведение и картинку для экранов шириной > 768px
-        button.setAttribute('onclick', "window.location.href='catalog.html'");
-        img.setAttribute('src', './img/magnifying_glass.png');
-    }
-}
 
 // Вызываем функцию при загрузке страницы и при изменении размера окна
 window.addEventListener('load', updateButton);
@@ -329,4 +318,12 @@ modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.classList.remove('show');
     }
+});
+
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', handleAddToCart);  // Для ПК
+
+    // Добавь обработчик для тач-событий на мобильных устройствах
+    button.addEventListener('touchstart', handleAddToCart);
 });
