@@ -1730,11 +1730,14 @@
             padding-bottom: 9px;
             padding-top: 43px;
         }
+        .item-img__hover {
+            display: flex !important; /* На мобильных устройствах кнопка всегда будет видна */
+            background: rgba(58, 56, 56, 0.86); /* Тот же фон, что и при hover */
+        }
+    
         .item-img__hover-btn {
-        display: block; /* Убедись, что кнопка видима */
-        position: relative;
-        z-index: 10; /* Убедись, что кнопка находится выше других элементов */
-    }
+            display: flex; /* Кнопка должна быть видимой */
+        }
 }
     
     
