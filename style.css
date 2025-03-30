@@ -178,7 +178,7 @@ img {
 
 .card_1 {
   background-size: cover;
-  background-image: url(./img/woman.jpg);
+  background-image: url(./img/woman.svg);
   width: 100%;
 }
 
@@ -223,7 +223,7 @@ img {
 .card_2 {
   background-size: cover;
   width: 100%;
-  background-image: url(./img/men.jpg);
+  background-image: url(./img/men.svg);
 }
 
 .card_3 {
