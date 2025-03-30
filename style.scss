@@ -17,6 +17,7 @@
     body {
         scroll-behavior: smooth;
         font-family: 'Lato', sans-serif;
+        
     }
     
     img {
@@ -125,6 +126,8 @@
     
     .menu_active {
         z-index: 9999;
+        margin-top: 30px;
+   
     }
     
     .main_menu {
@@ -1586,7 +1589,7 @@
             fill: rgb(255, 255, 255)
         }
     }
-    //МОБИЛКА ИНДЕКС
+    //МОБИЛКА ИНДЕКС------------------------------------------------------------
     @media (max-width: 767px) {
         // body, html {
         //     overflow-x: hidden;
@@ -1764,7 +1767,9 @@
             padding: 5px; /* Уменьшает лишние отступы */
             
         }
-
+        body{
+            padding-top: 60px; /* Регулируй в зависимости от высоты хедера */
+        }
 }
     
     
