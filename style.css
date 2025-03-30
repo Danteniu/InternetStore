@@ -126,7 +126,6 @@ img {
 
 .menu_active {
   z-index: 9999;
-  margin-top: 30px;
 }
 
 .main_menu {
@@ -1710,6 +1709,9 @@ img {
   }
   body {
     padding-top: 60px; /* Регулируй в зависимости от высоты хедера */
+  }
+  .menu_active {
+    margin-top: 30px;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
