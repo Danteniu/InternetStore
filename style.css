@@ -1683,7 +1683,7 @@ img {
   .item-img__hover_none {
     background: rgba(56, 167, 62, 0.86);
     color: rgb(248, 243, 243);
-    width: 200px;
+    width: 210px;
     margin-bottom: 20px;
     height: 100%;
     display: flex; /* Сделаем кнопку видимой, устанавливаем display на flex */
