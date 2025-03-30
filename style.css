@@ -178,7 +178,7 @@ img {
 
 .card_1 {
   background-size: cover;
-  background-image: url(./img/woman.png);
+  background-image: url(./img/woman.jpg);
   width: 100%;
 }
 
@@ -223,13 +223,13 @@ img {
 .card_2 {
   background-size: cover;
   width: 100%;
-  background-image: url(./img/men.png);
+  background-image: url(./img/men.jpg);
 }
 
 .card_3 {
   background-size: cover;
   width: 100%;
-  background-image: url(./img/kids.png);
+  background-image: url(./img/kids.jpg);
 }
 
 .card_4 {
