@@ -1697,6 +1697,10 @@ img {
     display: flex !important;
     justify-content: center;
     align-items: center;
+    width: -moz-fit-content;
+    width: fit-content; /* Подстраивает размер под кнопку */
+    background: rgba(37, 187, 62, 0.86);
+    padding: 5px; /* Уменьшает лишние отступы */
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {

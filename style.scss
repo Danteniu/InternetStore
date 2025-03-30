@@ -1744,12 +1744,19 @@
         }
         .item-img__hover {
             display: none !important;
+            
         }
         .item-img__hover_none {
             display: flex !important;
             justify-content: center;
             align-items: center;
+            width: fit-content; /* Подстраивает размер под кнопку */
+            // margin: 0 auto; /* Центрирует кнопку */
+            background: rgba(37, 187, 62, 0.86);
+            padding: 5px; /* Уменьшает лишние отступы */
+            
         }
+
 }
     
     
