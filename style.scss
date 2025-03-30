@@ -1598,7 +1598,15 @@
             
         }
         .head {
-            padding: 18px 0;
+            position: fixed; /* Фиксированное положение */
+            top: 0; /* Закрепить вверху */
+            left: 0;
+            width: 100%; /* На всю ширину */
+            z-index: 1000; /* Чтобы был поверх других элементов */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Добавляет тень */
+        }
+        body {
+            padding-top: 60px; /* Регулируй в зависимости от высоты хедера */
         }
         .head_naviration {
             justify-content: flex-start;
@@ -1606,9 +1614,9 @@
         .div_head_left {
             justify-content: flex-end;
         }
-        .hidden {
-            display: none;
-        }
+        // .hidden {
+        //     display: none;
+        // }
         .head_img_4_5 {
             display: none;
         }
