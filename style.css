@@ -1680,31 +1680,15 @@ img {
     padding-bottom: 9px;
     padding-top: 43px;
   }
-  .item-img__hover {
-    background: rgba(58, 56, 56, 0.86);
-    width: 100%;
+  .item-img__hover_none {
+    background: rgba(56, 167, 62, 0.86);
+    color: rgb(248, 243, 243);
+    width: 190px;
+    margin-bottom: 20px;
     height: 100%;
-    display: none; /* Скрыта по умолчанию */
+    display: flex; /* Сделаем кнопку видимой, устанавливаем display на flex */
     justify-content: center;
     align-items: center;
-  }
-  .item-img__hover-btn {
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    border: 1px solid #ffffff;
-    padding: 13px 16px;
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    font-family: "Lato";
-    font-size: 14px;
-    color: #ffffff;
-  }
-  .item-img__hover-btn::before {
-    content: url("./img/btn-cart.svg");
-    width: 26px;
-    height: 24px;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
