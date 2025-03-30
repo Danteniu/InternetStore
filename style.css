@@ -1690,6 +1690,9 @@ img {
     justify-content: center;
     align-items: center;
   }
+  .item-img__hover {
+    display: none; /* Скрываем кнопку на мобильных устройствах */
+  }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
   .container {

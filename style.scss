@@ -1742,7 +1742,9 @@
             justify-content: center;
             align-items: center;
         }
-        
+        .item-img__hover {
+            display: none; /* Скрываем кнопку на мобильных устройствах */
+        }
         
 }
     
