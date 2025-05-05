@@ -3,6 +3,11 @@ const menuActive = document.querySelector('.menu'); // Находим меню
 const burger = document.querySelector('.head_buttons'); // Находим кнопку бургера
 const body = document.body; // Получаем доступ к body для блокировки скролла основной страницы
 
+// Функция для проверки, является ли устройство мобильным
+function isMobile() {
+    return window.innerWidth <= 767; // Тот же брейкпоинт, что и в медиа-запросах CSS
+}
+
 function toggleMenu() {
     menuActive.classList.toggle("hiddens"); // Переключаем класс скрытия меню
     menuActive.classList.toggle("menu_active"); // Переключаем класс активности меню
@@ -49,9 +54,45 @@ function toggleMenu() {
             }, 500); // Время должно совпадать с transition в CSS (0.5s)
         }
     }
+    
+    // Проверяем, нужен ли скролл для меню, особенно на мобильных устройствах
+    checkMenuScroll();
 }
 
 burger.addEventListener('click', toggleMenu); // По клику на бургер вызываем функцию переключения меню
+
+// Функция для проверки необходимости скролла меню
+function checkMenuScroll() {
+    if (menuActive.classList.contains("menu_active")) {
+        const menuHeight = menuActive.scrollHeight;
+        const viewportHeight = isMobile() ? (window.innerHeight - 60) : window.innerHeight;
+        
+        if (menuHeight > viewportHeight) {
+            menuActive.style.overflowY = 'auto'; // Включаем скролл, если контент не помещается
+            
+            // Для мобильных устанавливаем высоту с учетом шапки
+            if (isMobile()) {
+                menuActive.style.height = 'auto';
+                menuActive.style.maxHeight = `${viewportHeight * 0.9}px`; // 90% от высоты экрана
+                
+                // Центрируем содержимое меню
+                const menuItems = menuActive.querySelectorAll('.menu_h, .menu a');
+                menuItems.forEach(item => {
+                    if (item.classList.contains('menu_h')) {
+                        item.style.textAlign = 'center';
+                    }
+                });
+            }
+        } else {
+            menuActive.style.overflowY = 'visible'; // Отключаем скролл, если контент помещается
+            
+            // Для мобильных - высота по содержимому
+            if (isMobile()) {
+                menuActive.style.height = 'auto';
+            }
+        }
+    }
+}
 
 // При загрузке страницы проверяем, открыто ли меню и добавляем кнопку закрытия если нужно
 document.addEventListener('DOMContentLoaded', function() {
@@ -62,19 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
         menuActive.appendChild(closeButton); // Добавляем кнопку в меню
         closeButton.addEventListener('click', toggleMenu); // Добавляем обработчик события клика
     }
+    
+    // Проверяем, нужен ли скролл для меню
+    checkMenuScroll();
 });
 
 // При изменении размера окна, проверяем, нужен ли скролл для меню
-window.addEventListener('resize', function() {
-    if (menuActive.classList.contains("menu_active")) {
-        // Если меню открыто, проверяем, поместится ли весь контент
-        if (menuActive.scrollHeight > window.innerHeight) {
-            menuActive.style.overflowY = 'auto'; // Включаем скролл, если контент не помещается
-        } else {
-            menuActive.style.overflowY = 'visible'; // Отключаем скролл, если контент помещается
-        }
-    }
-});
+window.addEventListener('resize', checkMenuScroll);
 
 function validateForm(event) {
     event.preventDefault(); // Чтобы не отправлять форму сразу
@@ -99,8 +134,6 @@ function validateForm(event) {
         document.getElementById('errorMessage').style.display = 'block';
     }
 }
-
-
 
 // НА КОРЗИНКЕ УВЕЛИЧИВАЛОСЬ ЧИСЛО
 // Находим элементы
@@ -165,7 +198,6 @@ subscribeButton.addEventListener('click', function(e) {
         }, 3000);
     }
 });
-
 
 //ДОБАВЛЕНИЕ ТОВАРА В КОРЗИНУ!!!!!!!
 
@@ -416,13 +448,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
 // Вызываем функцию при загрузке страницы и при изменении размера окна
 window.addEventListener('load', updateButton);
 window.addEventListener('resize', updateButton);
-
-
 
 // Получаем элементы
 const modal = document.getElementById('checkout-modal');
@@ -445,7 +473,6 @@ modal.addEventListener('click', (event) => {
         modal.classList.remove('show');
     }
 });
-
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', handleAddToCart);  // Для ПК

@@ -1836,11 +1836,64 @@ img {
     padding-top: 0px;
   }
   .menu {
-    width: 100%; /* Занимает всю ширину экрана */
-    right: auto; /* Убираем позиционирование справа */
-    left: 0; /* Размещаем слева */
-    height: calc(100vh - 60px); /* Высота с учетом шапки */
-    top: 60px; /* Отступ от верха, где находится шапка */
+    width: 100%; /* Меню на всю ширину экрана */
+    max-width: none; /* Убираем ограничение максимальной ширины */
+    right: 0;
+    left: 0; /* Устанавливаем позиционирование слева и справа */
+    height: auto;
+    max-height: 90vh; /* Увеличиваем максимальную высоту */
+    top: 60px;
+    border-radius: 0; /* Убираем скругление углов */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Тень только снизу */
+  }
+  
+  .menu_active {
+    transform: translateX(0);
+  }
+  
+  .hiddens {
+    transform: translateX(100%);
+  }
+  
+  /* Улучшаем стили меню для лучшего отображения на мобильных устройствах */
+  .main_menu {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(241, 109, 127, 0.3);
+  }
+  
+  .menu_h {
+    padding-left: 20px; /* Уменьшаем отступ слева */
+    font-size: 16px; /* Увеличиваем размер для лучшей читаемости */
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .menu_div {
+    margin-bottom: 15px;
+  }
+  
+  .menu_list {
+    padding-left: 0; /* Выравниваем список по центру */
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    padding-bottom: 10px;
+  }
+  
+  .menu li:before {
+    display: none; /* Убираем маркеры для более чистого вида */
+  }
+  
+  .menu a {
+    font-size: 15px; /* Увеличиваем размер текста для лучшей читаемости */
+    padding: 5px 0; /* Увеличиваем область нажатия */
+    display: inline-block; /* Для лучшего взаимодействия */
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
@@ -2169,4 +2222,37 @@ img {
   z-index: 9998; /* Z-index чуть ниже, чем у меню, но выше остальных элементов */
   opacity: 0; /* Изначально невидимый */
   transition: opacity 0.5s ease; /* Плавное появление/исчезновение */
+}
+
+/* Улучшенная кнопка закрытия для мобильных устройств */
+@media (max-width: 767px) {
+  .menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    opacity: 0.9;
+    z-index: 10000;
+  }
+  
+  .menu-close:before, .menu-close:after {
+    height: 3px; /* Увеличиваем толщину линий */
+    background: rgb(241, 109, 127); /* Сохраняем цвет бренда */
+  }
+  
+  /* Добавляем текст "Меню" в шапке меню */
+  .main_menu:before {
+    content: 'МЕНЮ';
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(241, 109, 127);
+  }
 }/*# sourceMappingURL=style.css.map */
