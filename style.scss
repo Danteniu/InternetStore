@@ -39,6 +39,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
     }
     
     .head_naviration {
@@ -112,6 +113,8 @@
     }
     
     .menu {
+        position: sticky;
+        z-index: 9999; /* Чтобы меню было поверх других элементов */
         background: rgb(255, 255, 255);
         width: 232px;
         height: 634px;
@@ -1616,12 +1619,7 @@
         .div_head_left {
             justify-content: flex-end;
         }
-        // .hidden {
-        //     display: none;
-        // }
-        // .head_img_4_5 {
-        //     display: none;
-        // }
+        
         .main_content--bg {
             margin-bottom: 64px;
         }
@@ -1778,7 +1776,11 @@
         .main_menu{
             padding-top: 0px;
         }
-        
+        .menu {
+            width: 100%; /* Занимает всю ширину экрана */
+        right: auto; /* Убираем позиционирование справа */
+        left: 0; /* Размещаем слева */
+        }
         
         //-----------------------------------------------------
 }  
