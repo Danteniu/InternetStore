@@ -1,115 +1,26 @@
 // БУРГЕР МЕНЮ
 const menuActive = document.querySelector('.menu'); // Находим меню
 const burger = document.querySelector('.head_buttons'); // Находим кнопку бургера
-const body = document.body; // Получаем доступ к body для блокировки скролла основной страницы
-
-// Функция для проверки, является ли устройство мобильным
-function isMobile() {
-    return window.innerWidth <= 767; // Тот же брейкпоинт, что и в медиа-запросах CSS
-}
+console.log(burger);
 
 function toggleMenu() {
-    menuActive.classList.toggle("hiddens"); // Переключаем класс скрытия меню
-    menuActive.classList.toggle("menu_active"); // Переключаем класс активности меню
-    
-    // Блокировка/разблокировка скролла основной страницы
-    if (menuActive.classList.contains("menu_active")) {
-        // Блокируем скролл основной страницы при открытом меню для предотвращения прокрутки заднего фона
-        body.style.overflow = 'hidden';
-        
-        // Создаем overlay (затемнение) для фона, если его еще нет
-        if (!document.querySelector('.menu-overlay')) {
-            const overlay = document.createElement('div'); // Создаем новый div-элемент
-            overlay.className = 'menu-overlay'; // Присваиваем класс для стилизации
-            document.body.appendChild(overlay); // Добавляем элемент в конец body
-            
-            // Анимация появления overlay с небольшой задержкой для плавности
-            setTimeout(() => {
-                overlay.style.opacity = '1'; // Делаем overlay видимым через CSS свойство opacity
-            }, 10); // Маленькая задержка для корректной работы анимации
-            
-            // Обработчик клика по overlay для закрытия меню
-            overlay.addEventListener('click', toggleMenu); // При клике на затемненную область меню закрывается
-        }
-        
-        // Создаем кнопку закрытия в меню, если её еще нет
-        if (!menuActive.querySelector('.menu-close')) {
-            const closeButton = document.createElement('button'); // Создаем новый элемент кнопки
-            closeButton.className = 'menu-close'; // Присваиваем класс для стилизации
-            menuActive.appendChild(closeButton); // Добавляем кнопку в меню
-            
-            // Обработчик клика по кнопке закрытия
-            closeButton.addEventListener('click', toggleMenu); // При клике на кнопку меню закрывается
-        }
-    } else {
-        // Возвращаем возможность прокрутки основной страницы при закрытии меню
-        body.style.overflow = '';
-        
-        // Удаляем overlay при закрытии меню
-        const overlay = document.querySelector('.menu-overlay');
-        if (overlay) {
-            overlay.style.opacity = '0'; // Сначала делаем overlay невидимым для анимации
-            setTimeout(() => {
-                overlay.remove(); // Удаляем элемент из DOM после завершения анимации
-            }, 500); // Время должно совпадать с transition в CSS (0.5s)
-        }
-    }
-    
-    // Проверяем, нужен ли скролл для меню, особенно на мобильных устройствах
-    checkMenuScroll();
+    console.log('lala');
+    menuActive.classList.toggle("hiddens");
+    menuActive.classList.toggle("menu_active"); //Ф-ция уделяет или устанавливает клесс с названием "hidden"
+    // div с классом •menu-active
 }
 
-burger.addEventListener('click', toggleMenu); // По клику на бургер вызываем функцию переключения меню
+burger.addEventListener('click', toggleMenu); // По клику на бургер, срабатывает ф-ция
 
-// Функция для проверки необходимости скролла меню
-function checkMenuScroll() {
-    if (menuActive.classList.contains("menu_active")) {
-        const menuHeight = menuActive.scrollHeight;
-        const viewportHeight = isMobile() ? (window.innerHeight - 60) : window.innerHeight;
-        
-        if (menuHeight > viewportHeight) {
-            menuActive.style.overflowY = 'auto'; // Включаем скролл, если контент не помещается
-            
-            // Для мобильных устанавливаем высоту с учетом шапки
-            if (isMobile()) {
-                menuActive.style.height = 'auto';
-                menuActive.style.maxHeight = `${viewportHeight * 0.9}px`; // 90% от высоты экрана
-                
-                // Центрируем содержимое меню
-                const menuItems = menuActive.querySelectorAll('.menu_h, .menu a');
-                menuItems.forEach(item => {
-                    if (item.classList.contains('menu_h')) {
-                        item.style.textAlign = 'center';
-                    }
-                });
-            }
-        } else {
-            menuActive.style.overflowY = 'visible'; // Отключаем скролл, если контент помещается
-            
-            // Для мобильных - высота по содержимому
-            if (isMobile()) {
-                menuActive.style.height = 'auto';
-            }
-        }
-    }
-}
-
-// При загрузке страницы проверяем, открыто ли меню и добавляем кнопку закрытия если нужно
-document.addEventListener('DOMContentLoaded', function() {
-    // Если меню активно при загрузке страницы (например, после перезагрузки страницы)
-    if (menuActive.classList.contains("menu_active") && !menuActive.querySelector('.menu-close')) {
-        const closeButton = document.createElement('button'); // Создаем новый элемент кнопки
-        closeButton.className = 'menu-close'; // Присваиваем класс для стилизации
-        menuActive.appendChild(closeButton); // Добавляем кнопку в меню
-        closeButton.addEventListener('click', toggleMenu); // Добавляем обработчик события клика
-    }
+// Закрытие меню при клике вне его области
+document.addEventListener('click', function(event) {
+    const isClickInsideMenu = menuActive.contains(event.target);
+    const isClickOnBurger = burger.contains(event.target);
     
-    // Проверяем, нужен ли скролл для меню
-    checkMenuScroll();
+    if (!isClickInsideMenu && !isClickOnBurger && menuActive.classList.contains('menu_active')) {
+        toggleMenu();
+    }
 });
-
-// При изменении размера окна, проверяем, нужен ли скролл для меню
-window.addEventListener('resize', checkMenuScroll);
 
 function validateForm(event) {
     event.preventDefault(); // Чтобы не отправлять форму сразу
@@ -135,9 +46,11 @@ function validateForm(event) {
     }
 }
 
+
+
 // НА КОРЗИНКЕ УВЕЛИЧИВАЛОСЬ ЧИСЛО
 // Находим элементы
-const cartCountElement = document.querySelector('.head_img_4_5 span'); // Элемент с количеством товаров
+const cartCountElement = document.querySelector('.floating-cart__count span'); // Элемент с количеством товаров
 const addToCartButton = document.querySelectorAll('.item-img__hover-btn'); // Кнопки "Добавить в корзину"
 const cartItemsContainer = document.querySelector('.cart-items-container'); // Контейнер для товаров в корзине (например, список товаров)
 
@@ -199,10 +112,11 @@ subscribeButton.addEventListener('click', function(e) {
     }
 });
 
+
 //ДОБАВЛЕНИЕ ТОВАРА В КОРЗИНУ!!!!!!!
 
 document.addEventListener('DOMContentLoaded', function() {
-    const cartCountElement = document.querySelector('.head_img_4_5 span');
+    const cartCountElement = document.querySelector('.floating-cart__count span');
     let currentCount = parseInt(localStorage.getItem('cartCount')) || 0; // Получаем количество товаров из localStorage
 
     // Устанавливаем количество в корзине
@@ -223,34 +137,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 const productName = productCard.querySelector('.text_card_description h2').textContent;
                 const productPrice = productCard.querySelector('.text_card_description h1').textContent;
                 const productColor = productCard.querySelector('.text_card_description h6') ? productCard.querySelector('.text_card_description h6').textContent : '';
+
                 const productImage = productCard.querySelector('.item-img').style.backgroundImage;
 
-                // Проверяем, есть ли уже такой товар в корзине по ключевым атрибутам (имя, цена, цвет)
-                const existingProductIndex = cart.findIndex(item => 
-                    item.name === productName && 
-                    item.price === productPrice && 
-                    item.color === productColor
-                );
+                // Добавляем товар в корзину
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    color: productColor
+                });
 
-                if (existingProductIndex !== -1) {
-                    // Если товар уже есть в корзине, увеличиваем его количество на 1
-                    // Используем || 1 для случая, если quantity не определено в существующем товаре
-                    cart[existingProductIndex].quantity = (cart[existingProductIndex].quantity || 1) + 1;
-                } else {
-                    // Если товара нет в корзине, добавляем новый товар с начальным количеством 1
-                    cart.push({
-                        name: productName,
-                        price: productPrice,
-                        image: productImage,
-                        color: productColor,
-                        quantity: 1 // Устанавливаем начальное количество 1 для нового товара
-                    });
-                }
-
-                // Увеличиваем общее количество товаров в корзине для отображения в счетчике
+                // Увеличиваем количество товаров
                 currentCount++;
 
-                // Сохраняем обновленную корзину и счетчик в localStorage
+                // Сохраняем корзину и количество товаров в localStorage
                 localStorage.setItem('cart', JSON.stringify(cart));
                 localStorage.setItem('cartCount', currentCount);
 
@@ -264,9 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Обработчик для удаления товара из корзины и обновления счетчика
 if (document.querySelector('.shopping_cart_items')) {
     const cartItemsContainer = document.querySelector('.shopping_cart_items');
-    const cartCountElement = document.querySelector('.head_img_4_5 span'); // Получаем элемент счетчика товаров
     let cart = JSON.parse(localStorage.getItem('cart')) || []; // Загружаем корзину из localStorage
-    let currentCount = parseInt(localStorage.getItem('cartCount')) || 0; // Получаем текущий счетчик товаров
 
     // Функция для обновления корзины
     function updateCart() {
@@ -289,9 +188,6 @@ if (document.querySelector('.shopping_cart_items')) {
             // Извлекаем путь к картинке из строки, например: url("./img/6card.png") -> ./img/6card.png
             const imagePath = item.image.replace(/^url\(["']?([^"']+)["']?\)$/, '$1'); // Убираем обёртку url(...)
 
-            // Получаем количество товара из объекта, если не указано, используем 1 по умолчанию
-            const quantity = item.quantity || 1;
-
             // Заполняем товар в корзине
             itemBlock.innerHTML = `
                 <img class="shopping_cart_img" src="${imagePath}" alt="${item.name}">
@@ -303,11 +199,11 @@ if (document.querySelector('.shopping_cart_items')) {
                         <li class="shopping_cart_li">Размер: Xl</li>
                         <div class="shopping_cart_li_div">
                             <li class="shopping_cart_li">Количество:</li>
-                            <input class="shopping_cart_p quantity-input" type="number" value="${quantity}" min="1" data-index="${index}">
+                            <input class="shopping_cart_p" type="number" value="1">
                         </div>
                     </ul>
                 </div>
-                <svg class="shopping_cart_cross" width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" data-index="${index}">
+                <svg class="shopping_cart_cross" width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.24 9L17.53 2.71C17.82 2.41 17.99 2.01 17.99 1.59C17.99 1.17 17.82 0.76 17.53 0.46C17.23 0.16 16.83 0 16.4 0C15.98 0 15.58 0.16 15.28 0.46L9 6.75L2.71 0.46C2.41 0.16 2.01 0 1.59 0C1.16 0 0.76 0.16 0.46 0.46C0.16 0.76 0 1.16 0 1.59C0 2.01 0.16 2.41 0.46 2.71L6.75 9L0.46 15.28C0.16 15.58 0 15.98 0 16.4C0 16.83 0.16 17.23 0.46 17.53C0.76 17.83 1.16 18 1.59 18C2.01 18 2.41 17.83 2.71 17.53L9 11.24L15.28 17.53C15.58 17.83 15.98 18 16.4 18C16.83 18 17.23 17.83 17.53 17.53C17.83 17.23 18 16.83 18 16.4C18 15.98 17.83 15.58 17.53 15.28L11.24 9Z" fill="#575757"/>
                 </svg>
             `;
@@ -318,55 +214,19 @@ if (document.querySelector('.shopping_cart_items')) {
 
             const priceElement = itemBlock.querySelector('.pink_text');
             if (priceElement) {
-                // Извлекаем цену в формате строки, преобразуем в число и умножаем на количество товара
-                const price = parseFloat(priceElement.textContent.replace(' руб.', '').replace(',', '.'));
-                const totalItemPrice = price * quantity; // Вычисляем общую стоимость товара (цена × количество)
-                prices.push(totalItemPrice);
+                // Извлекаем цену в формате строки и добавляем в массив
+                prices.push(parseFloat(priceElement.textContent.replace(' руб.', '').replace(',', '.')));
             }
         });
 
         updateTotalPrice(prices);
-
-        // Добавляем обработчики изменения количества для каждого поля ввода количества
-        const quantityInputs = document.querySelectorAll('.quantity-input');
-        quantityInputs.forEach(input => {
-            input.addEventListener('change', function() {
-                const index = this.getAttribute('data-index'); // Получаем индекс товара из атрибута
-                const newQuantity = parseInt(this.value) || 1; // Получаем новое количество из поля ввода
-                
-                // Проверяем, чтобы количество не было меньше 1
-                if (newQuantity <= 0) {
-                    this.value = 1; // Если ввели 0 или отрицательное число, устанавливаем 1
-                    return;
-                }
-
-                // Вычисляем разницу между новым и старым количеством для обновления общего счетчика
-                const oldQuantity = cart[index].quantity || 1;
-                const difference = newQuantity - oldQuantity;
-                
-                // Обновляем количество товара в объекте корзины
-                cart[index].quantity = newQuantity;
-                
-                // Обновляем общий счетчик товаров в корзине, добавляя разницу
-                currentCount += difference;
-                cartCountElement.textContent = currentCount;
-                
-                // Сохраняем изменения в localStorage
-                localStorage.setItem('cart', JSON.stringify(cart));
-                localStorage.setItem('cartCount', currentCount);
-                
-                // Обновляем отображение корзины для отображения изменений
-                updateCart();
-            });
-        });
     }
 
     function updateTotalPrice(prices) {
         const totalElement = document.querySelector('.shopping_cart_form2 .t_900_1');
         const totalPriceElement = document.querySelector('.shopping_cart_form2 .pink_text.t_900');
 
-        // Проверяем, существует ли элемент и есть ли товары в корзине
-        if (totalElement && prices.length > 0) {
+        if (totalElement) {
             const lastPrice = prices[prices.length - 1];
             totalElement.textContent = lastPrice.toFixed(2).replace('.', ',') + ' руб.'; // Обновляем цену последнего товара
         }
@@ -382,31 +242,23 @@ if (document.querySelector('.shopping_cart_items')) {
 
     // Обработчик для удаления товара из корзины
     cartItemsContainer.addEventListener('click', function(event) {
-        // Проверяем, был ли клик на крестик удаления или его родительский элемент
-        const crossElement = event.target.closest('.shopping_cart_cross');
-        
-        if (crossElement) {
-            // Получаем индекс товара из data-атрибута
-            const index = crossElement.getAttribute('data-index');
-            
-            if (index !== null && index !== undefined) {
-                // Получаем количество удаляемого товара для корректного обновления счетчика
-                const removedQuantity = cart[index].quantity || 1;
-                
-                // Удаляем товар из массива корзины по индексу
-                cart.splice(index, 1);
-                
-                // Уменьшаем количество товаров в корзине на количество удаленного товара
-                currentCount = Math.max(0, currentCount - removedQuantity); // Используем Math.max для предотвращения отрицательных значений
-                cartCountElement.textContent = currentCount;
-                
-                // Сохраняем обновленные данные в localStorage
-                localStorage.setItem('cart', JSON.stringify(cart));
-                localStorage.setItem('cartCount', currentCount);
-                
-                // Перерисовываем корзину для отображения изменений
-                updateCart();
-            }
+        if (event.target.classList.contains('shopping_cart_cross')) {
+            const itemElement = event.target.closest('.shopping_cart_main');
+            const itemName = itemElement.querySelector('.shopping_cart_h1').textContent;
+
+            // Удаляем товар из корзины
+            cart = cart.filter(item => item.name !== itemName);
+
+            // Уменьшаем количество товаров в корзине
+            currentCount = cart.length;
+            cartCountElement.textContent = currentCount; // Обновляем счетчик в шапке
+
+            // Сохраняем обновленные данные в localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem('cartCount', currentCount);
+
+            // Перерисовываем корзину
+            updateCart();
         }
     });
 }
@@ -448,9 +300,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 // Вызываем функцию при загрузке страницы и при изменении размера окна
 window.addEventListener('load', updateButton);
 window.addEventListener('resize', updateButton);
+
+
 
 // Получаем элементы
 const modal = document.getElementById('checkout-modal');
@@ -473,6 +329,7 @@ modal.addEventListener('click', (event) => {
         modal.classList.remove('show');
     }
 });
+
 
 addToCartButtons.forEach(button => {
     button.addEventListener('click', handleAddToCart);  // Для ПК
