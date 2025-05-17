@@ -1526,35 +1526,39 @@ img {
     margin-left: 32px;
   }
   
-  .main_content--bg {
-    height: 363px;
-  }
-  
   .main_content {
-    height: 363px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    height: auto;
   }
   
   .main_content_right_side {
-    display: none;
-  }
-  
-  .man {
-    margin-top: -51px;
-    max-width: 368px;
-    position: absolute;
-    left: 0;
+    display: block;
+    border-left: none;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 16px;
   }
   
   .bid_text {
-    font-size: 38px;
-    line-height: 46px;
+    font-size: 28px;
   }
   
   .small_text {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+  }
+  
+  .man {
+    position: static;
+    margin-top: 0;
+    max-width: 80vw;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .cards {
