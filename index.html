@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    <div class="floating-cart" onclick="window.location.href='shopping_cart.html'">
-      <img class="floating-cart__icon" src="./img/shopping_cart.svg" alt="shopping_cart" />
-      <div class="floating-cart__count"><span>0</span></div>
-    </div>
     <h1 style="display: none;">Сайт магазина одежды для женщин, мужчин и детей</h1>
     <header class="head">
         <nav class="header container">
@@ -22,11 +18,16 @@
           </button>
             </div>
             <div class="div_head_left">
+                <!-- <button class="head_button hidden" onclick="window.location.href='shopping_cart.html'">
+                    <img class="head_img_4" src="./img/shopping_cart.svg" alt="shopping_cart" />
+                  </button > -->
+
                 <button class="head_button hidden" onclick="window.location.href='registration.html'"><img class="head_img_3" src="./img/human.svg" alt="human" /></button>
                 <button class="head_button head_buttons">
                     <img class="head_img_2" src="./img/three_features.svg" alt="three_features" />
                   </button>
-            </div>
+          <!-- <div class="head_img_4_5"><span>0</span></div> -->
+        </div>
       </nav>
     </header>
     <main class="main">
@@ -325,6 +326,11 @@
                     </div>
                 </div>
             </footer>
+            <!-- Плавающая кнопка корзины -->
+            <div class="floating-cart-btn" onclick="window.location.href='shopping_cart.html'">
+              <img src="./img/shopping_cart.svg" alt="cart" />
+              <div class="floating-cart-count"><span>0</span></div>
+            </div>
             </main>
 
             <script src="./script.js"></script>

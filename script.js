@@ -50,12 +50,14 @@ function validateForm(event) {
 
 // НА КОРЗИНКЕ УВЕЛИЧИВАЛОСЬ ЧИСЛО
 // Находим элементы
-const cartCountElement = document.querySelector('.floating-cart__count span'); // Элемент с количеством товаров
+const cartCountElement = document.querySelector('.floating-cart-count span'); // Элемент с количеством товаров
 const addToCartButton = document.querySelectorAll('.item-img__hover-btn'); // Кнопки "Добавить в корзину"
 const cartItemsContainer = document.querySelector('.cart-items-container'); // Контейнер для товаров в корзине (например, список товаров)
 
 let currentCount = parseInt(localStorage.getItem('cartCount')) || 0; // Используем 0, если значение не найдено
-cartCountElement.textContent = currentCount; // Обновляем отображение количества товаров
+if (cartCountElement) {
+  cartCountElement.textContent = currentCount; // Обновляем отображение количества товаров
+}
 
 // Обработчик для добавления товара в корзину
 addToCartButton.forEach(element => {
@@ -64,7 +66,9 @@ addToCartButton.forEach(element => {
         currentCount++;
 
         // Обновляем количество в корзине
-        cartCountElement.textContent = currentCount;
+        if (cartCountElement) {
+          cartCountElement.textContent = currentCount;
+        }
 
         // Сохраняем новое количество товаров в локальном хранилище
         localStorage.setItem('cartCount', currentCount);
@@ -116,7 +120,7 @@ subscribeButton.addEventListener('click', function(e) {
 //ДОБАВЛЕНИЕ ТОВАРА В КОРЗИНУ!!!!!!!
 
 document.addEventListener('DOMContentLoaded', function() {
-    const cartCountElement = document.querySelector('.floating-cart__count span');
+    const cartCountElement = document.querySelector('.floating-cart-count span');
     let currentCount = parseInt(localStorage.getItem('cartCount')) || 0; // Получаем количество товаров из localStorage
 
     // Устанавливаем количество в корзине
@@ -156,7 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('cartCount', currentCount);
 
                 // Обновляем отображение количества товаров в корзине
-                cartCountElement.textContent = currentCount;
+                if (cartCountElement) {
+                  cartCountElement.textContent = currentCount;
+                }
             });
         });
     }
