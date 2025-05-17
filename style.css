@@ -129,8 +129,7 @@ img {
   height: auto;
   max-height: 400px;
   z-index: 1000;
-  padding-right: 32px;
-  padding-bottom: 20px;
+  padding: 10px 16px 10px 0;
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0 8px;
   overflow-y: auto;
@@ -266,9 +265,24 @@ img {
   text-align: center;
 }
 
+.button_card {
+  color: rgb(242, 99, 118);
+  width: 240px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  cursor: pointer;
+  padding: 15px 39px;
+  background: transparent;
+  border: 2px solid rgb(241, 109, 127);
+  border-radius: 24px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-bottom: 109px;
+}
 .button_card:hover {
-  background: rgb(241, 109, 127);
-  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #e05c6e 0%, #f16d7f 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(224,92,110,0.18);
 }
 
 .item-img {
@@ -290,27 +304,29 @@ img {
   align-items: center;
 }
 
-.item-img__hover-btn {
+.item-img__hover-btn, .item-img__hover-btn_none {
+  background: linear-gradient(90deg, #e05c6e 0%, #f16d7f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(224,92,110,0.10);
   cursor: pointer;
-  background: transparent;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
   outline: none;
-  border: 1px solid #ffffff;
-  padding: 13px 16px;
+  margin-top: 8px;
   display: flex;
   align-items: center;
-  gap: 11px;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
+  gap: 10px;
 }
-
-.item-img__hover-btn::before {
-  content: url("./img/btn-cart.svg");
-  width: 26px;
-  height: 24px;
+.item-img__hover-btn:hover, .item-img__hover-btn_none:hover {
+  background: linear-gradient(90deg, #f16d7f 0%, #e05c6e 100%);
+  box-shadow: 0 4px 16px rgba(224,92,110,0.18);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .cards_row {
@@ -384,19 +400,6 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
-}
-
-.button_card {
-  color: rgb(242, 99, 118);
-  width: 240px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  cursor: pointer;
-  padding: 15px 39px;
-  background-color: transparent;
-  border: 2px solid rgb(241, 109, 127);
-  margin-bottom: 109px;
 }
 
 .black {
@@ -1476,6 +1479,11 @@ img {
   .menu_active {
     top: 75px;
   }
+  .button_card {
+    background: transparent !important;
+    border: 2px solid rgb(241, 109, 127);
+    color: rgb(242, 99, 118);
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -1499,6 +1507,7 @@ img {
     top: 61px;
     overflow-y: auto;
     border-radius: 0 0 0 8px;
+    padding: 10px 8px 10px 0;
   }
   
   .menu_active {
@@ -1742,6 +1751,26 @@ img {
   .catalog_section_but {
     display: none;
     visibility: hidden;
+  }
+  .card_text h1, .card_text h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .card_text {
+    padding: 8px 0;
+    min-width: 0;
+    max-width: 100%;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+  }
+  .blackout {
+    padding: 0 8px;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
@@ -2020,4 +2049,35 @@ img {
   width: 32px;
   height: 32px;
   filter: brightness(0) invert(1);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.select-size {
+  display: block;
+  margin: 12px 0 8px 0;
+  padding: 8px 24px 8px 12px;
+  font-size: 15px;
+  font-family: 'Lato', Arial, sans-serif;
+  color: #222224;
+  background: #fff;
+  border: 1.5px solid #e05c6e;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(224,92,110,0.08);
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.select-size:focus, .select-size:hover {
+  border: 1.5px solid #f16d7f;
+  box-shadow: 0 4px 16px rgba(224,92,110,0.18);
+}
+.select-size option {
+  color: #222224;
+  background: #fff;
+}
+@media (min-width: 1141px) {
+  .button_card {
+    background: transparent !important;
+    border: 2px solid rgb(241, 109, 127);
+    color: rgb(242, 99, 118);
+  }
+}
