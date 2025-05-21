@@ -283,6 +283,8 @@ if (document.querySelector('.shopping_cart_items')) {
         if (totalPriceElement) {
             const totalPrice = prices.reduce((sum, price) => sum + price, 0);
             totalPriceElement.textContent = totalPrice.toFixed(2).replace('.', ',') + ' руб.';
+            // Сохраняем итоговую сумму в localStorage для передачи на страницу оформления заказа (с форматированием)
+            localStorage.setItem('cartTotal', totalPriceElement.textContent);
         }
     }
 

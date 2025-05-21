@@ -1487,7 +1487,8 @@ img {
 }
 @media (max-width: 767px) {
   .container {
-    max-width: 360px;
+    max-width: 344px;
+    width: 100%;
   }
   
   .head {
@@ -1527,44 +1528,52 @@ img {
   }
   
   .main_content {
+    height: auto;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: auto;
+    justify-content: flex-start;
+    padding: 20px 0 0 0;
+    margin-bottom: 0;
   }
   
   .main_content_right_side {
-    display: block;
+    padding-left: 15px;
     border-left: none;
     max-width: 100%;
-    padding-left: 0;
     text-align: center;
-    margin-top: 16px;
-  }
-  
-  .bid_text {
-    font-size: 28px;
-  }
-  
-  .small_text {
-    font-size: 16px;
+    order: 1;
+    margin-bottom: 20px;
   }
   
   .man {
-    position: static;
-    margin-top: 0;
-    max-width: 80vw;
+    position: relative;
+    left: 0;
+    visibility: visible;
     width: 100%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    order: 2;
+    object-fit: contain;
+    max-height: none;
+  }
+  
+  .bid_text {
+    font-weight: 900;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  
+  .small_text {
+    font-weight: 700;
+    font-size: 20px;
   }
   
   .cards {
-    margin-top: 64px;
-    flex-wrap: wrap;
-    margin-bottom: 64px;
+    margin-top: 0;
+    background: #fff;
+    padding-top: 64px;
   }
   
   .card_1,
@@ -1772,9 +1781,11 @@ img {
     white-space: normal;
     text-align: center;
   }
-  .blackout {
-    padding: 0 8px;
-    box-sizing: border-box;
+  .background_card {
+    margin-bottom: 64px;
+    min-height: auto;
+    position: relative;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
