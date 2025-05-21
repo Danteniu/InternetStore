@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="display: none;">Сайт магазина одежды для женщин, мужчин и детей</h1>
+    <header class="head">
+        <nav class="header container">
+            <div class="head_naviration">
+                <a class="pink" href="./index.html"><img src="./img/pink_circle.svg" alt="pink_circle.png" /></a>
+                <button class="head_button" onclick="window.location.href='catalog.html'"></button>
+            </div>
+            <div class="div_head_left">
+                <button class="head_button hidden" onclick="window.location.href='registration.html'"><img class="head_img_3" src="./img/human.svg" alt="human" /></button>
+                <button class="head_button head_buttons">
+                    <img class="head_img_2" src="./img/three_features.svg" alt="three_features" />
+                </button>
+            </div>
+        </nav>
+        <div class="menu hiddens">
+            <h1 class="main_menu">МЕНЮ</h1>
+            <div class="menu_div">
+                <h1 class="menu_h" onclick="window.location.href='catalog_2.html'">МУЖЧИНЫ</h1>
+                <ul style="list-style-type: none;" class="menu_list">
+                    <li><a href="#">Аксессуары</a></li>
+                    <li><a href="#">Сумки</a></li>
+                    <li><a href="#">Джинсы</a></li>
+                    <li><a href="#">Рубашки</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="menu_div">
+                    <h1 class="menu_h" onclick="window.location.href='catalog.html'">ЖЕНЩИНЫ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="menu_div">
+                    <h1 onclick="window.location.href='kids.html'" class="menu_h">ДЕТИ</h1>
+                    <ul style="list-style-type: none;" class="menu_list">
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Куртки &amp;&nbsp;Пальто</a></li>
+                        <li><a href="#">Поло</a></li>
+                        <li><a href="#">Футболки</a></li>
+                        <li><a href="#">Рубашки</a></li>
+                        <li><a href="#">Сумки</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main_content--bg" style="margin-bottom: 0;">
+            <div class="container" style="padding-top: 80px; padding-bottom: 40px;">
+                <h1 class="bid_text" style="text-align:center; margin-bottom: 16px;">Оформление заказа</h1>
+                <div class="checkout-form-block" style="max-width: 420px; margin: 0 auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(224,92,110,0.08); padding: 32px 24px;">
+                    <form class="checkout-form stylish-form">
+                        <input type="text" placeholder="Имя" required>
+                        <input type="text" placeholder="Адрес доставки" required>
+                        <input type="tel" placeholder="Телефон" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Комментарий к заказу" rows="3"></textarea>
+                        <div class="checkout-total-block">Итого: <span id="checkout-total" class="pink_text">0 ₽</span></div>
+                        <button type="submit" class="stylish-btn">Подтвердить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="white">
+            <div class="white_section container">
+                <div class="blackout_white">
+                    <div class="blackout_white_left">
+                        <img src="./img/Intersect.svg" alt="round_picture">
+                        <p>"Интернет-магазин — это не просто место для покупок, это пространство, где каждый может найти что-то, что сделает его день немного лучше"</p>
+                    </div>
+                    <div class="blackout_white_right">
+                        <h1>СООБЩИТЬ О ПРОБЛЕМЕ</h1>
+                        <h2>Белянкина Елизавета</h2>
+                        <div class="but_form">
+                            <form class="form" action="#">
+                                <input type="text" placeholder="Введите свой адрес электронной почты." class="email-input">
+                                <button class="white_but">Сообщить.</button>
+                            </form>
+                        </div>
+                        <div class="error-message" style="display: none; color: red;">
+                            Пожалуйста, введите ваш email.
+                        </div>
+                    </div>
+                    <div class="success-message" style="display: none;">
+                        Мы скоро с Вами свяжемся!
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_div container">
+            <h1>© 2025  Бренд: Все права защищены.</h1>
+            <div>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="black"><g clip-path="url(#a)">
+                        <path d="M6.74.203C3.555.203.408 2.341.408 5.8c0 2.2 1.23 3.45 1.974 3.45.307 0 .484-.863.484-1.106 0-.29-.735-.91-.735-2.119 0-2.513 1.9-4.294 4.358-4.294 2.114 0 3.678 1.21 3.678 3.431 0 1.66-.661 4.772-2.803 4.772-.773 0-1.434-.562-1.434-1.368 0-1.182.82-2.325.82-3.544 0-2.069-2.915-1.694-2.915.806 0 .525.065 1.106.298 1.584-.429 1.857-1.304 4.622-1.304 6.535 0 .59.084 1.172.14 1.762.105.12.053.107.214.047 1.564-2.156 1.509-2.578 2.216-5.4.382.732 1.37 1.125 2.151 1.125 3.297 0 4.777-3.234 4.777-6.15 0-3.103-2.663-5.128-5.587-5.128Z"/></g><defs>
+                        <path fill="#fff" d="M.408 0h11.92v16H.407z"/></defs>
+                    </svg>
+                </button>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="black"><g clip-path="url(#a)">
+                        <path d="M14.418 4.741c.01.142.01.284.01.426 0 4.335-3.277 9.33-9.267 9.33a9.16 9.16 0 0 1-5.002-1.472c.262.03.515.04.787.04a6.496 6.496 0 0 0 4.044-1.4A3.266 3.266 0 0 1 1.944 9.39c.202.03.404.05.615.05.293 0 .585-.04.857-.111A3.274 3.274 0 0 1 .805 6.112V6.07c.433.244.937.396 1.472.416a3.283 3.283 0 0 1-1.452-2.73c0-.61.161-1.168.444-1.656a9.238 9.238 0 0 0 6.715 3.432 3.727 3.727 0 0 1-.08-.751c0-1.808 1.452-3.28 3.257-3.28a3.24 3.24 0 0 1 2.38 1.036 6.386 6.386 0 0 0 2.067-.792 3.266 3.266 0 0 1-1.432 1.807 6.494 6.494 0 0 0 1.876-.507 7.029 7.029 0 0 1-1.634 1.695Z"/></g><defs>
+                            <path fill="#fff" d="M.16 0H16.05v16H.16z"/></defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <div class="floating-cart-btn" onclick="window.location.href='shopping_cart.html'">
+        <img src="./img/shopping_cart.svg" alt="cart" />
+        <div class="floating-cart-count"><span>0</span></div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var total = localStorage.getItem('cartTotal');
+        document.getElementById('checkout-total').textContent = total || '0 руб.';
+        
+        // Обработка отправки формы
+        document.querySelector('.checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Получение значений полей
+            const name = this.querySelector('input[placeholder="Имя"]').value;
+            const address = this.querySelector('input[placeholder="Адрес доставки"]').value;
+            const phone = this.querySelector('input[placeholder="Телефон"]').value;
+            const email = this.querySelector('input[placeholder="Email"]').value;
+            
+            // Проверка заполнения полей
+            if (!name || !address || !phone || !email) {
+                alert('Пожалуйста, заполните все обязательные поля');
+                return;
+            }
+            
+            // Скрыть форму
+            this.style.display = 'none';
+            
+            // Показать сообщение об успешном оформлении
+            const formBlock = document.querySelector('.checkout-form-block');
+            formBlock.innerHTML = `
+                <div class="success-order">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="32" fill="#E05C6E" fill-opacity="0.1"/>
+                        <path d="M28.0002 38.1998L22.8002 32.9998L20.8002 34.9998L28.0002 42.1998L44.0002 26.1998L42.0002 24.1998L28.0002 38.1998Z" fill="#E05C6E"/>
+                    </svg>
+                    <h2 style="color: #222224; margin: 16px 0 8px;">Заказ успешно оформлен!</h2>
+                    <p style="text-align: center; margin-bottom: 24px;">Спасибо за ваш заказ, ${name}! Мы отправили подтверждение на ${email}.<br>В ближайшее время с вами свяжется наш менеджер.</p>
+                    <button class="stylish-btn" style="min-width: 240px; padding: 16px 24px;" onclick="window.location.href='index.html'">Вернуться на главную</button>
+                </div>
+            `;
+            
+            // Очистить корзину
+            localStorage.removeItem('cartItems');
+            localStorage.removeItem('cartTotal');
+            
+            // Обновить счетчик в плавающей корзине
+            const cartCount = document.querySelector('.floating-cart-count span');
+            if (cartCount) {
+                cartCount.textContent = '0';
+            }
+        });
+    });
+    </script>
+    <script src="./script.js"></script>
+    <style>
+    .stylish-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .stylish-form input,
+    .stylish-form textarea {
+      border: 1.5px solid #e05c6e;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-family: 'Lato', Arial, sans-serif;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+      background: #faf7f8;
+      color: #222224;
+      box-shadow: 0 2px 8px rgba(224,92,110,0.04);
+    }
+    .stylish-form input:focus,
+    .stylish-form textarea:focus {
+      border: 1.5px solid #f16d7f;
+      box-shadow: 0 4px 16px rgba(224,92,110,0.12);
+    }
+    .stylish-form textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .checkout-total-block {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 16px 0 8px;
+      text-align: right;
+    }
+    .stylish-btn {
+      background: linear-gradient(90deg, #e05c6e 0%, #f16d7f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      font-size: 18px;
+      font-family: 'Lato', Arial, sans-serif;
+      font-weight: 800;
+      padding: 16px 0;
+      box-shadow: 0 4px 16px rgba(224,92,110,0.12);
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+      margin-top: 8px;
+    }
+    .stylish-btn:hover, .stylish-btn:focus {
+      background: linear-gradient(90deg, #f16d7f 0%, #e05c6e 100%);
+      box-shadow: 0 8px 24px rgba(224,92,110,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .success-order {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+    </style>
+</body>
+</html> 
