@@ -217,6 +217,7 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 10px;
 }
 
 .white_text {
@@ -230,8 +231,8 @@ img {
 .card_text h3 {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1px;
-  margin-bottom: 30px;
+  line-height: normal;
+  margin-bottom: 10px;
 }
 
 .card_text h1 {
@@ -839,6 +840,7 @@ img {
   box-sizing: border-box;
   height: 132px;
   margin-bottom: 0px;
+  align-items: center;
 }
 
 .filter {
@@ -874,7 +876,7 @@ img {
 }
 .filter_heading {
   color: rgb(111, 110, 110);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 17px;
 }
@@ -921,7 +923,7 @@ img {
 }
 .sort_heading {
   color: rgb(111, 110, 110);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 17px;
 }
@@ -1504,9 +1506,9 @@ img {
     width: 100%;
     max-width: 250px;
     height: auto;
-    max-height: 350px;
+    max-height: none;
     top: 61px;
-    overflow-y: auto;
+    overflow-y: visible;
     border-radius: 0 0 0 8px;
     padding: 10px 8px 10px 0;
   }
@@ -1543,7 +1545,7 @@ img {
     max-width: 100%;
     text-align: center;
     order: 1;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .man {
@@ -1573,29 +1575,39 @@ img {
   .cards {
     margin-top: 0;
     background: #fff;
-    padding-top: 64px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    gap: 25px;
   }
   
   .card_1,
   .card_2,
   .card_3 {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 0;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
   }
   
   .card_4 {
     width: 100%;
+    grid-column: unset;
     height: 111px;
+    margin-bottom: 20px;
   }
   
   .cards_bottom {
-    margin-bottom: 70.5px;
+    margin-bottom: 50px;
   }
   
   .cards_row {
     grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
-    margin-bottom: 41px;
+    gap: 12px;
+    margin-bottom: 30px;
   }
   
   .text_card_bottom h1 {
@@ -1622,11 +1634,11 @@ img {
   }
   
   .black_section {
-    padding-top: 48px;
-    padding-bottom: 64px;
+    padding-top: 35px;
+    padding-bottom: 45px;
     max-width: 100%;
     flex-direction: column;
-    gap: 46px;
+    gap: 35px;
   }
   
   .black_section_div {
@@ -1765,27 +1777,51 @@ img {
     display: none;
     visibility: hidden;
   }
-  .card_text h1, .card_text h3 {
-    font-size: 18px;
-    line-height: 1.2;
-    word-break: break-word;
-    white-space: normal;
-    text-align: center;
-    margin-bottom: 8px;
+  .card_text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
   }
-  .card_text {
-    padding: 8px 0;
-    min-width: 0;
-    max-width: 100%;
-    word-break: break-word;
-    white-space: normal;
-    text-align: center;
+  
+  .card_text h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
   }
+  
+  .blackout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .background_card {
     margin-bottom: 64px;
     min-height: auto;
     position: relative;
     padding-bottom: 20px;
+  }
+  
+  /* Добавляю стиль для уменьшения отступа main_content--bg в мобильной версии */
+  .main_content--bg {
+    margin-bottom: 30px;
+  }
+  
+  .filter_summary svg {
+    width: 20px;
+    margin-top: 0;
+  }
+  
+  .filter-sort {
+    align-items: center;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .filter_heading {
+    display: none;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
@@ -1852,19 +1888,32 @@ img {
   }
   .filter {
     position: absolute;
+    display: flex;
+    align-items: center;
   }
+  
+  .filter_summary {
+    display: flex;
+    align-items: center;
+  }
+  
   .filter_summary svg {
     width: 20px;
     margin-top: 5px;
   }
+  
   .sort {
     position: relative;
     margin-top: 20px;
     margin-left: 60px;
+    display: flex;
+    align-items: center;
   }
+  
   .filter[open] {
     max-width: 250px;
   }
+  
   .filter_content {
     margin-left: 10px;
   }
