@@ -6,9 +6,17 @@ console.log(burger);
 if (menuActive && burger) {
   function toggleMenu() {
       console.log('lala');
-      menuActive.classList.toggle("hiddens");
-      menuActive.classList.toggle("menu_active"); //Ф-ция уделяет или устанавливает клесс с названием "hidden"
-      // div с классом •menu-active
+      // Проверяем, есть ли класс hiddens и правильно переключаем классы
+      if (menuActive.classList.contains('hiddens')) {
+          menuActive.classList.remove("hiddens");
+          menuActive.classList.add("menu_active");
+      } else if (menuActive.classList.contains('menu_active')) {
+          menuActive.classList.remove("menu_active");
+          menuActive.classList.add("hiddens");
+      } else {
+          // Если ни один из классов не найден, добавляем класс menu_active
+          menuActive.classList.toggle("menu_active");
+      }
   }
 
   burger.addEventListener('click', toggleMenu); // По клику на бургер, срабатывает ф-ция

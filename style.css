@@ -423,6 +423,9 @@ img {
 
 .black_section_img {
   margin-top: 103px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .black_section h2 {
@@ -525,6 +528,7 @@ img {
   border-radius: 30px 0px 0 30px;
   width: 322.59px;
   height: 49px;
+  font-size: 13px;
 }
 
 .email-input::-moz-placeholder {
@@ -849,7 +853,7 @@ img {
   width: 360px;
   box-sizing: border-box;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 .filter_content {
   background-color: #ffffff;
@@ -864,6 +868,9 @@ img {
 .filter[open] {
   background: rgb(255, 255, 255);
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  position: absolute;
+  left: 0;
+  top: 40px;
 }
 .filter_summary {
   display: flex;
@@ -1634,21 +1641,28 @@ img {
   }
   
   .black_section {
-    padding-top: 35px;
-    padding-bottom: 45px;
-    max-width: 100%;
+    padding-top: 68px;
+    padding-bottom: 81px;
     flex-direction: column;
-    gap: 35px;
+    justify-content: center;
+    gap: 65px;
+    height: 650px;
   }
   
   .black_section_div {
-    width: 100%;
-    max-width: 308px;
-    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 48px;
+    gap: 1px;
+    max-height: 147px;
+    margin-bottom: 15px;
+  }
+  
+  .black_section_div:first-child {
+    padding-top: 60px;
   }
   
   .black_section_img {
-    margin-bottom: 13px;
+    padding-bottom: 28px;
   }
   
   .black_section p {
@@ -1662,11 +1676,13 @@ img {
   
   .blackout_white {
     flex-direction: column;
+    gap: 15px;
   }
   
   .blackout_white_left p {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 15px;
   }
   
   .blackout_white_right h2 {
@@ -1674,7 +1690,9 @@ img {
   }
   
   .email-input {
-    width: 245px;
+    width: 260px;
+    padding-left: 15px;
+    font-size: 11px;
   }
   
   .footer_div {
@@ -1890,6 +1908,7 @@ img {
     position: absolute;
     display: flex;
     align-items: center;
+    z-index: 50;
   }
   
   .filter_summary {
@@ -1912,10 +1931,16 @@ img {
   
   .filter[open] {
     max-width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
   .filter_content {
     margin-left: 10px;
+    padding: 10px;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
