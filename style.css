@@ -1876,17 +1876,36 @@ img {
     display: none !important;
   }
   
-  /* Показываем только одну кнопку под описанием */
-  .item-img__hover_none {
+  /* Настраиваем видимость кнопки под описанием */
+  .text_card_description .item-img__hover_none {
     display: flex !important;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 0 15px;
+    width: 100%;
   }
   
-  .item-img__hover-btn_none {
+  /* Стили для самой кнопки под описанием */
+  .text_card_description .item-img__hover-btn_none {
     width: 100%;
     padding: 15px 20px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #e05c6e 0%, #f16d7f 100%);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 700;
     display: block !important;
+  }
+  
+  /* Стиль при наведении на кнопку */
+  .text_card_description .item-img__hover-btn_none:hover {
+    background: linear-gradient(90deg, #f16d7f 0%, #e05c6e 100%);
+  }
+  
+  /* Полностью скрываем кнопку при наведении на изображение */
+  .item-img .item-img__hover {
+    display: none !important;
   }
 }
 @media (max-width: 1140px) and (min-width: 768px) {
