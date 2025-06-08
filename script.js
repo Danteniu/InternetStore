@@ -192,65 +192,80 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileAddToCartButtons = document.querySelectorAll('.item-img__hover-btn_none');
     
     mobileAddToCartButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const productCard = button.closest('.background_card');
-            const productName = productCard.querySelector('.text_card_description h2').textContent;
-            const productPrice = productCard.querySelector('.text_card_description h1').textContent;
-            const productColor = productCard.querySelector('.text_card_description h6') ? productCard.querySelector('.text_card_description h6').textContent : '';
-            const productImage = productCard.querySelector('.item-img').style.backgroundImage;
-            const productSize = productCard.querySelector('.select-size') ? productCard.querySelector('.select-size').value : 'M';
-            
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            
-            // Проверяем, есть ли уже такой товар в корзине (с учетом размера)
-            let found = false;
-            for (let item of cart) {
-                if (item.name === productName && item.color === productColor && item.image === productImage && item.size === productSize) {
-                    item.count = (item.count || 1) + 1;
-                    found = true;
-                    break;
-                }
-            }
-            
-            if (!found) {
-                cart.push({
-                    name: productName,
-                    price: productPrice,
-                    image: productImage,
-                    color: productColor,
-                    size: productSize,
-                    count: 1
-                });
-            }
-            
-            // Пересчитываем общее количество товаров
-            let currentCount = cart.reduce((sum, item) => sum + (item.count || 1), 0);
-            
-            // Сохраняем корзину и количество товаров в localStorage
-            localStorage.setItem('cart', JSON.stringify(cart));
-            localStorage.setItem('cartCount', currentCount);
-            
-            // Обновляем отображение количества товаров в корзине
-            const cartCountElement = document.querySelector('.floating-cart-count span');
-            if (cartCountElement) {
-                cartCountElement.textContent = currentCount;
-            }
-            
-            // Создаём и показываем сообщение "Товар добавлен в корзину"
-            const message = document.createElement('div');
-            message.textContent = "Товар добавлен в корзину";
-            message.classList.add('cart-message');
-            
-            // Добавляем сообщение на страницу
-            document.body.appendChild(message);
-            
-            // Через 3 секунды скрываем сообщение
-            setTimeout(() => {
-                message.remove();
-            }, 3000);
+        // Добавляем обработчик для клика
+        button.addEventListener('click', addToCartMobile);
+        
+        // Добавляем обработчик для тач-событий на мобильных устройствах
+        button.addEventListener('touchstart', function(e) {
+            e.preventDefault(); // Предотвращаем дефолтное поведение
+            addToCartMobile.call(this, e);
+        });
+        
+        // Добавляем обработчик для touchend, чтобы избежать двойного срабатывания
+        button.addEventListener('touchend', function(e) {
+            e.preventDefault();
         });
     });
 });
+
+// Функция для добавления товара в корзину с мобильной версии
+function addToCartMobile(event) {
+    const productCard = this.closest('.background_card');
+    const productName = productCard.querySelector('.text_card_description h2').textContent;
+    const productPrice = productCard.querySelector('.text_card_description h1').textContent;
+    const productColor = productCard.querySelector('.text_card_description h6') ? productCard.querySelector('.text_card_description h6').textContent : '';
+    const productImage = productCard.querySelector('.item-img').style.backgroundImage;
+    const productSize = productCard.querySelector('.select-size') ? productCard.querySelector('.select-size').value : 'M';
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Проверяем, есть ли уже такой товар в корзине (с учетом размера)
+    let found = false;
+    for (let item of cart) {
+        if (item.name === productName && item.color === productColor && item.image === productImage && item.size === productSize) {
+            item.count = (item.count || 1) + 1;
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found) {
+        cart.push({
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            color: productColor,
+            size: productSize,
+            count: 1
+        });
+    }
+    
+    // Пересчитываем общее количество товаров
+    let currentCount = cart.reduce((sum, item) => sum + (item.count || 1), 0);
+    
+    // Сохраняем корзину и количество товаров в localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cartCount', currentCount);
+    
+    // Обновляем отображение количества товаров в корзине
+    const cartCountElement = document.querySelector('.floating-cart-count span');
+    if (cartCountElement) {
+        cartCountElement.textContent = currentCount;
+    }
+    
+    // Создаём и показываем сообщение "Товар добавлен в корзину"
+    const message = document.createElement('div');
+    message.textContent = "Товар добавлен в корзину";
+    message.classList.add('cart-message');
+    
+    // Добавляем сообщение на страницу
+    document.body.appendChild(message);
+    
+    // Через 3 секунды скрываем сообщение
+    setTimeout(() => {
+        message.remove();
+    }, 3000);
+}
 
 // Обработчик для удаления товара из корзины и обновления счетчика
 if (document.querySelector('.shopping_cart_items')) {
