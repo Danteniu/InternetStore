@@ -452,14 +452,6 @@ modal.addEventListener('click', (event) => {
 });
 
 
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', handleAddToCart);  // Для ПК
-
-    // Добавь обработчик для тач-событий на мобильных устройствах
-    button.addEventListener('touchstart', handleAddToCart);
-});
-
-
 
 
 
